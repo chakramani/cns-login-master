@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: White Label Login
-Plugin URI: wordpress.enthusiast@gmail.com
+Plugin Name: CM Custom Login
+Plugin URI: chakramanijoshi@gmail.com
 Description: Custom Admin Login 
 Version: 1.0.0
 Author: codepixelz
-Author URI: wordpress.enthusiast@gmail.com
+Author URI: chakramanijoshi@gmail.com
 */
 
 if (!defined('ABSPATH')) {

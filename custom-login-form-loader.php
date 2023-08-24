@@ -18,7 +18,7 @@ function cpm_custom_admin_login_form()
 function cpm_custom_login_page()
 { ?>
         <form method="post" action="options.php" id="cpm-form">
-                <h1>White Label WP Login </h1>
+                <h1>Admin Login Settings</h1>
                 <fieldset>
                         <?php
                         settings_fields('login-form-setting-group');
@@ -75,6 +75,20 @@ function admin_login_logo()
                                         <?php } ?>
                                 </div>
                         </div>
+                </div>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="background-bkur">Logo width</label>
+                        </div>
+                        <input type='range' name=admin_login_form[logo_width] class='logo-width' value='<?php echo !empty($admin_login['logo_width']) ?$admin_login['logo_width'] : ''; ?>' min="0" max="100"/>
+                        <label for="" class="logo-width-range"><?php echo !empty($admin_login['logo_width']) ?$admin_login['logo_width'] : ''; ?>px</label>
+                </div>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="background-bkur">Logo height</label>
+                        </div>
+                        <input type='range' name=admin_login_form[logo_height] class='logo-height' value='<?php echo !empty($admin_login['logo_height']) ?$admin_login['logo_height'] : ''; ?>' min="0" max="100"/>
+                        <label for="" class="logo-height-range"><?php echo !empty($admin_login['logo_height']) ?$admin_login['logo_height'] : ''; ?>px</label>
                 </div>
         </fieldset>
         <fieldset class="cpm-background-settings">
@@ -135,9 +149,38 @@ function admin_login_logo()
                 <legend><span class="number">3</span> Text Settings</legend>
                 <div class="cpm-login">
                         <div class="cpm-label-title">
-                                <label for="alert-box-text-color">Alert Bod Text Color</label>
+                                <label for="text-color">Text Color</label>
+                        </div>
+                        <input type='color' name=admin_login_form[text_color] class='' value='<?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?>' />
+                </div>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="font-size">Font Size</label>
+                        </div>
+                        <input type='range' name=admin_login_form[font_size] class='font-size' value='<?php echo !empty($admin_login['font_size']) ?$admin_login['font_size'] : ''; ?>' min="0" max="100"/>
+                        <label for="" class="font-size-range"><?php echo !empty($admin_login['font_size']) ?$admin_login['font_size'] : ''; ?>px</label>
+                </div>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="alert-box-text-color">Alert Box Text Color</label>
                         </div>
                         <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>' />
+                </div>
+        </fieldset>
+        <fieldset class="background-text-settings">
+                <legend><span class="number">4</span> Link Settings</legend>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="link-font-size">Font Size</label>
+                        </div>
+                        <input type='range' name=admin_login_form[link_font_size] class='link-font-size' value='<?php echo !empty($admin_login['link_font_size']) ?$admin_login['link_font_size'] : ''; ?>' min="0" max="100"/>
+                        <label for="" class="link-font-size-range"><?php echo !empty($admin_login['link_font_size']) ?$admin_login['link_font_size'] : ''; ?>px</label>
+                </div>
+                <div class="cpm-login">
+                        <div class="cpm-label-title">
+                                <label for="link-text-color">Alert Box Text Color</label>
+                        </div>
+                        <input type='color' name=admin_login_form[link_text_color] class='' value='<?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?>' />
                 </div>
         </fieldset>
 

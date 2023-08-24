@@ -9,7 +9,10 @@ jQuery(document).ready(function () {
     imageUploader.on("select", function () {
       var attachment = imageUploader.state().get("selection").first().toJSON();
       jQuery("#admin_login_logo_hidden").val(attachment.url);
-      jQuery("#image_preview_login_logo").css('background-image', 'url('+attachment.url+')');
+      jQuery("#image_preview_login_logo").css(
+        "background-image",
+        "url(" + attachment.url + ")"
+      );
     });
 
     imageUploader.open();
@@ -26,16 +29,38 @@ jQuery(document).ready(function () {
     imageUploader.on("select", function () {
       var attachment = imageUploader.state().get("selection").first().toJSON();
       jQuery("#admin_login_bg_image_hidden").val(attachment.url);
-      jQuery("#mobile_image_preview_login_bg").css('background-image', 'url('+attachment.url+')');
+      jQuery("#mobile_image_preview_login_bg").css(
+        "background-image",
+        "url(" + attachment.url + ")"
+      );
     });
 
     imageUploader.open();
   });
 
   //range
-  jQuery('input[type=range]').on('input', function () {
+  jQuery(".bg-blur").on("input", function () {
     var value = jQuery(this).val();
-    jQuery('.bg-blur-range').text(value+'px');
+    jQuery(".bg-blur-range").text(value + "px");
+  });
+  //width
+  jQuery(".logo-width").on("input", function () {
+    var value = jQuery(this).val();
+    jQuery(".logo-width-range").text(value + "px");
+  });
+  //height
+  jQuery(".logo-height").on("input", function () {
+    var value = jQuery(this).val();
+    jQuery(".logo-height-range").text(value + "px");
+  });
+  //font size
+  jQuery(".font-size").on("input", function () {
+    var value = jQuery(this).val();
+    jQuery(".font-size-range").text(value + "px");
+  });
+  //link font size
+  jQuery(".link-font-size").on("input", function () {
+    var value = jQuery(this).val();
+    jQuery(".link-font-size-range").text(value + "px");
+  });
 });
-});
-
