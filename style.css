@@ -1,10 +1,11 @@
 :root {
   --primarycolor: #4bc970;
   --secondarycolor: #3ac162;
-  --thirdcolor: #70c78a;
+  --thirdcolor: #4bc9706e;
   --graycolor: #d7d7d7;
   --whitecolor: #fff;
   --headingbg: #dddddd;
+  --blackcolor: #000000;
 }
 .wl-header {
   text-align: center;
@@ -204,7 +205,7 @@ input.wl-upload-btn:hover {
   height: 100px;
 }
 
-code {
+/* code {
   display: none;
   font-size: 1.2rem;
   background-color: var(--thirdcolor);
@@ -216,7 +217,7 @@ code {
   align-items: center;
   width: 25%;
   text-align: center;
-}
+} */
 .wl-color {
   display: flex;
 }
@@ -308,7 +309,7 @@ code {
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
-  left: -5px;
+  left: -10px;
   position: absolute;
 }
 #delete_admin_login_logo:after {
@@ -354,6 +355,10 @@ code {
   text-align: center;
   margin: auto;
 }
+#delete_admin_login_logo:hover,#delete_admin_login_background_imge:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
 .wl-img-upload .avatar-preview {
   width: 100px;
   height: 100px;
@@ -376,21 +381,6 @@ code {
   top: 0px;
   left: -12px;
 }
-/* input[type='range'] {
-  background: var(--primarycolor);
-  border: solid 2px #82CFD0;
-  border-radius: 8px;
-  height: 7px;
-  -webkit-appearance: none;
-}
-input[type='range']::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  -webkit-appearance: none;
-  cursor: ew-resize;
-  background: #434343;
-} */
 
 input[type="range"] {
   -webkit-appearance: none;
@@ -432,6 +422,15 @@ input[type="range"]::-webkit-slider-thumb {
 .message-box-padding-wrapper {
   display: flex;
 }
+.login-container-margin-wrapper span,
+.login-container-padding-wrapper span,
+.login-form-margin-wrapper span,
+.login-form-padding-wrapper span,
+.message-box-margin-wrapper span,
+.message-box-padding-wrapper span {
+    align-items: center;
+    display: flex;
+}
 .login-container-margin-wrapper input[type="number"],
 .login-container-padding-wrapper input[type="number"],
 .login-form-margin-wrapper input[type="number"],
@@ -442,4 +441,28 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .login-container-margin-wrapper span {
   align-items: center;
+}
+
+.login-form-bg-color-wrapper,.login-form-color-wrapper,.login-form-text-color-wrapper,.message-box-bg-color-wrapper,.message-box-text-color-wrapper,.link-text-color-wrapper,.login-btn-bg-color-wrapper,.login-btn-color-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+#wl-form .color-code {
+  padding: 6px;
+  background: var(--primarycolor);
+  cursor: copy;
+}
+#wl-form .color-code.copied {
+  padding: 6px;
+  background: var(--thirdcolor);
+  cursor: copy;
+}
+
+.copied-message{
+  display: none;
+}
+.copied-message.active{
+  display: block;
 }

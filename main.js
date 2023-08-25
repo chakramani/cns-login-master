@@ -1,5 +1,4 @@
 jQuery(document).ready(function () {
-
   //upload logo
   jQuery("#admin_login_logo").click(function (e) {
     e.preventDefault();
@@ -15,7 +14,7 @@ jQuery(document).ready(function () {
         "background-image",
         "url(" + attachment.url + ")"
       );
-      jQuery(".pre-upload-logo").append("<img src="+attachment.url+">");
+      jQuery(".pre-upload-logo").append("<img src=" + attachment.url + ">");
     });
 
     imageUploader.open();
@@ -36,7 +35,7 @@ jQuery(document).ready(function () {
         "background-image",
         "url(" + attachment.url + ")"
       );
-      jQuery(".pre-upload-bg-image").append("<img src="+attachment.url+">");
+      jQuery(".pre-upload-bg-image").append("<img src=" + attachment.url + ">");
     });
 
     imageUploader.open();
@@ -45,22 +44,41 @@ jQuery(document).ready(function () {
   // delete background image
   jQuery("#delete_admin_login_background_imge").click(function (e) {
     e.preventDefault();
-    jQuery("#admin_login_bg_image_hidden").val('');
-    jQuery("#mobile_image_preview_login_bg").css(
-      "background-image",
-      "url('')"
-    );
+    jQuery("#admin_login_bg_image_hidden").val("");
+    jQuery("#mobile_image_preview_login_bg").css("background-image", "url('')");
   });
 
   //delete logo
   jQuery("#delete_admin_login_logo").click(function (e) {
     e.preventDefault();
 
-    jQuery("#admin_login_logo_hidden").val('');
-    jQuery("#image_preview_login_logo").css(
-      "background-image",
-      "url('')"
-    );
+    jQuery("#admin_login_logo_hidden").val("");
+    jQuery("#image_preview_login_logo").css("background-image", "url('')");
+  });
+
+  //color code
+  jQuery("#wl-form input[type='color']").on("input", function () {
+    var color_code = this.value;
+    jQuery(this).closest(".wl-login").find(".color-code").text(color_code);
+  });
+  //copy color code
+  jQuery(".color-code").on("click", function () {
+    var color_code= jQuery(this);
+    var copied_msg = jQuery(this).closest(".wrapper").find("span.copied-message");
+    console.time("time");
+    var temp = jQuery("<input>");
+    jQuery("body").append(temp);
+    temp.val(jQuery(this).first().text()).select();
+    document.execCommand("copy");
+    temp.remove();
+    jQuery(this).addClass("copied");
+    copied_msg.addClass("active");
+    copied_msg.text('Copied!!');
+    setInterval(function () {
+      jQuery(color_code).removeClass("copied");
+      jQuery(copied_msg).removeClass("active");
+    }, 6000);
+    console.timeEnd("time");
   });
 
   //range
@@ -114,6 +132,15 @@ jQuery(document).ready(function () {
   //   var value = jQuery(this).val();
   //   jQuery(this).css('background',`linear-gradient(to right, #82CFD0 0%, #82CFD0 ${value}/2%, #fff ${value}/2%, white 100%)`);
   // });
-  
 });
- 
+
+// function copy(this) {
+//   console.time("time123");
+//   console.log(this.text());
+//   var temp = jQuery("<input>");
+//   jQuery("body").append(temp);
+//   temp.val(jQuery("#copyText1").text()).select();
+//   document.execCommand("copy");
+//   temp.remove();
+//   console.timeEnd("time111");
+// }

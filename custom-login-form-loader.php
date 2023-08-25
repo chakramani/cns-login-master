@@ -131,8 +131,9 @@ function admin_login_logo()
                         <div class="wl-label-title">
                                 <label for="background-color">Background Color</label>
                         </div>
-                        <div class="login-form-bg-color-wrapper">
+                        <div class="wrapper login-form-bg-color-wrapper">
                                 <input type='color' name=admin_login_form[bg_color] class='' value='<?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''; ?>' />
+                                <div class="color-code" tooltip="Slide to the left" flow="left"><?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''; ?></div><span class="copied-message"></span>
                         </div>
                 </div>
                 <div class="wl-login">
@@ -198,16 +199,18 @@ function admin_login_logo()
                         <div class="wl-label-title">
                                 <label for="login-form-color">Background Color</label>
                         </div>
-                        <div class="login-form-color-wrapper">
+                        <div class="wrapper login-form-color-wrapper">
                                 <input type='color' name=admin_login_form[login_box_bg_color] class='' value='<?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''; ?></div><span class="copied-message"></span>
                         </div>
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
                                 <label for="text-color">Text Color</label>
                         </div>
-                        <div class="login-form-text-color-wrapper">
+                        <div class="wrapper login-form-text-color-wrapper">
                                 <input type='color' name=admin_login_form[text_color] class='' value='<?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?></div><span class="copied-message"></span>
                         </div>
                 </div>
                 <div class="wl-login">
@@ -273,13 +276,19 @@ function admin_login_logo()
                         <div class="wl-label-title">
                                 <label for="lalert-box-bg-color">Background Color</label>
                         </div>
-                        <input type='color' name=admin_login_form[alert_box_bg_color] class='' value='<?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?>' />
+                        <div class="wrapper message-box-bg-color-wrapper">
+                                <input type='color' name=admin_login_form[alert_box_bg_color] class='' value='<?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?></div><span class="copied-message"></span>
+                        </div>
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
                                 <label for="alert-box-text-color">Text Color</label>
                         </div>
-                        <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>' />
+                        <div class="wrapper message-box-text-color-wrapper">
+                                <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?></div><span class="copied-message"></span>
+                        </div>
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
@@ -342,8 +351,9 @@ function admin_login_logo()
                         <div class="wl-label-title">
                                 <label for="link-text-color">Link Text Color</label>
                         </div>
-                        <div class="link-text-color-wrapper">
+                        <div class="wrapper link-text-color-wrapper">
                                 <input type='color' name=admin_login_form[link_text_color] class='' value='<?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?></div><span class="copied-message"></span>
                         </div>
                 </div>
         </fieldset>
@@ -353,8 +363,9 @@ function admin_login_logo()
                         <div class="wl-label-title">
                                 <label for="login-btn-bg-color">Background Color</label>
                         </div>
-                        <div class="login-btn-bg-color-wrapper">
+                        <div class="wrapper login-btn-bg-color-wrapper">
                                 <input type='color' name=admin_login_form[login_btn_bg_color] class='wl-login-btn-bg-color' value='<?php echo !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?></div><span class="copied-message"></span>
                         </div>
                 </div>
                 <div class="wl-login">
@@ -363,6 +374,7 @@ function admin_login_logo()
                         </div>
                         <div class="login-btn-color-wrapper">
                                 <input type='color' name=admin_login_form[login_btn_color] class='wl-login-btn-text-color' value='<?php echo !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?>' />
+                                <div class="color-code"><?php echo !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?></div>
                         </div>
                 </div>
                 <div class="wl-login">
@@ -377,4 +389,3 @@ function admin_login_logo()
         </fieldset>
 
 <?php }
-
