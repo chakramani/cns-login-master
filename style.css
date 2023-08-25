@@ -4,29 +4,40 @@
   --thirdcolor: #70c78a;
   --graycolor: #d7d7d7;
   --whitecolor: #fff;
+  --headingbg: #dddddd;
 }
-
+.wl-header {
+  text-align: center;
+  background: var(--primarycolor);
+  padding: 20px 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.wl-header img {
+  width: 200px;
+  height: auto;
+}
 /* form */
 
-#cpm-form {
+#wl-form {
   max-width: 768px;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin: 0 auto 10px auto;
+  padding: 0;
   background: #f4f7f8;
   border-radius: 8px;
 }
-.upload__box {
+.wl-upload-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#cpm-form table td,
-#cpm-form table th {
+#wl-form table td,
+#wl-form table th {
   border: 1px solid #d7d7d7;
   padding: 5px 20px;
   margin: 0;
 }
-#cpm-form input[type="color"] {
+#wl-form input[type="color"] {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 16px;
@@ -36,16 +47,16 @@
   width: 25%;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 }
-input.cpm-upload-btn {
+input.wl-upload-btn {
   background: var(--primarycolor);
   color: var(--whitecolor);
   border: none;
 }
-input.cpm-upload-btn:hover {
+input.wl-upload-btn:hover {
   background: #f4f7f8;
   color: var(--primarycolor);
 }
-#cpm-form input[type="submit"] {
+#wl-form input[type="submit"] {
   color: #fff;
   background-color: var(--primarycolor);
   font-size: 18px;
@@ -59,28 +70,37 @@ input.cpm-upload-btn:hover {
   margin-bottom: 10px;
 }
 
-#cpm-form fieldset {
+#wl-form fieldset {
   margin-bottom: 30px;
   border: none;
   overflow: hidden;
 }
 
-#cpm-form legend {
+#wl-form legend {
   font-size: 1.4em;
   margin-bottom: 10px;
+  background: var(--headingbg);
+  width: 100%;
+  padding: 10px 5px;
+  font-weight: bold;
 }
 
-#cpm-form label {
-  display: block;
-  margin-bottom: 8px;
+#wl-form label {
+  display: flex;
+  font-weight: normal;
+  font-size: 16px;
+  align-items: center;
 }
-
-#cpm-form label.light {
+.pre-upload-bg-image img,
+.pre-upload-logo img {
+  margin-left: 10px;
+}
+#wl-form label.light {
   font-weight: 300;
   display: inline;
 }
 
-#cpm-form .number {
+#wl-form .number {
   background-color: var(--primarycolor);
   color: #fff;
   height: 30px;
@@ -96,25 +116,25 @@ input.cpm-upload-btn:hover {
 #image_preview_login_logo {
   background-size: contain;
 }
-#cpm-form h1 {
+#wl-form h1 {
   margin: 0 0 30px 0;
   text-align: center;
   font-weight: normal;
 }
-#cpm-form .cpm_table {
+#wl-form .wl_table {
   width: 100%;
 }
 
-#cpm-form .cpm_table tr th {
+#wl-form .wl_table tr th {
   text-align: left;
 }
 
-#cpm-form p {
+#wl-form p {
   margin: 0;
 }
 
-#cpm-form .upload__inputfile,
-#cpm-form .upload__inputfilebg {
+#wl-form .upload__inputfile,
+#wl-form .upload__inputfilebg {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -122,8 +142,8 @@ input.cpm-upload-btn:hover {
   position: absolute;
   z-index: -1;
 }
-#cpm-form .upload__btn {
-  display: inline-block;
+#wl-form .wl-upload-btn {
+  /* display: inline-block; */
   font-weight: 600;
   color: #fff;
   text-align: center;
@@ -138,25 +158,25 @@ input.cpm-upload-btn:hover {
   line-height: 26px;
   font-size: 14px;
 }
-#cpm-form .upload__btn:hover {
+#wl-form .wl-upload-btn:hover {
   background-color: unset;
   color: var(--secondarycolor);
   transition: all 0.3s ease;
 }
-#cpm-form .upload__btn-box {
+#wl-form .wl-upload-btn-box {
   margin-bottom: 10px;
 }
-#cpm-form .upload__img-wrap {
+#wl-form .upload__img-wrap {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
 }
-#cpm-form .upload__img-box {
+#wl-form .upload__img-box {
   width: 200px;
   padding: 0 10px;
   margin-bottom: 12px;
 }
-#cpm-form .upload__img-close {
+#wl-form .upload__img-close {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -169,13 +189,13 @@ input.cpm-upload-btn:hover {
   z-index: 1;
   cursor: pointer;
 }
-#cpm-form .upload__img-close:after {
+#wl-form .upload__img-close:after {
   content: "✖";
   font-size: 14px;
   color: white;
 }
 
-#cpm-form .img-bg {
+#wl-form .img-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -197,92 +217,229 @@ code {
   width: 25%;
   text-align: center;
 }
-.cpm-color {
+.wl-color {
   display: flex;
 }
 
-.cpm-login {
+.wl-login {
   border-bottom: 1px solid var(--graycolor);
-  padding: 5px 0;
+  padding: 10px 20px;
+  clear: both;
 }
-.cpm-login img {
+.wl-login img {
   width: 80px;
   height: 80px;
   object-fit: cover;
 }
-.cpm-label-title {
+.wl-label-title {
   float: left;
   width: 40%;
   display: flex;
   align-items: center;
   line-height: 40px;
 }
-.cpm-label-title label {
+.wl-label-title label {
   float: left;
   width: 60%;
   font-weight: bold;
 }
 
-
-.cpm-img-upload {
+.wl-img-upload {
   position: relative;
   max-width: 205px;
   /* margin: 50px auto; */
 }
 
-.cpm-img-upload .avatar-edit {
+.wl-img-upload .avatar-edit {
   position: absolute;
   right: 12px;
   z-index: 1;
   top: 10px;
 }
 
-.cpm-img-upload .avatar-edit input {
+.wl-img-upload .avatar-edit input {
   display: none;
 }
-.cpm-img-upload .avatar-edit input + label {
+.wl-img-upload .avatar-edit input + label {
   display: inline-block;
   width: 25px;
   height: 25px;
   margin-bottom: 0;
   border-radius: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid transparent;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
+  left: -5px;
+  top: -15px;
+  position: absolute;
 }
-.cpm-img-upload .avatar-edit input + label:hover {
+.wl-img-upload .avatar-edit input + label:hover {
   background: #f1f1f1;
   border-color: #d6d6d6;
 }
-.cpm-img-upload .avatar-edit input + label:after {
+.wl-img-upload .avatar-edit input + #admin_login_logo:after,
+.wl-img-upload .avatar-edit input + #admin_login_background_imge:after {
   content: "\f464";
   color: #757575;
   font-family: dashicons;
   position: absolute;
   font-size: 20px;
-  top: 4px;
-  left: 0;
+  top: 0px;
+  left: 5px;
+  top: 2px;
   right: 0;
   text-align: center;
   margin: auto;
 }
-
-.cpm-img-upload .avatar-preview {
+#delete_admin_login_logo {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  top: 70px;
+  color: #fff;
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  left: -5px;
+  position: absolute;
+}
+#delete_admin_login_logo:after {
+  content: "\f182";
+  color: #a70000;
+  font-family: dashicons;
+  position: absolute;
+  font-size: 20px;
+  top: 0px;
+  left: 3px;
+  top: 2px;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+#delete_admin_login_background_imge {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  top: 85px;
+  color: #fff;
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  left: -5px;
+  position: absolute;
+}
+#delete_admin_login_background_imge:after {
+  content: "\f182";
+  color: #a70000;
+  font-family: dashicons;
+  position: absolute;
+  font-size: 20px;
+  top: 0px;
+  left: 3px;
+  top: 2px;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.wl-img-upload .avatar-preview {
   width: 100px;
   height: 100px;
   position: relative;
   border-radius: 100%;
-  border: 6px solid #F8F8F8;
+  border: 6px solid #f8f8f8;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.cpm-img-upload .avatar-preview > div {
+.wl-img-upload .avatar-preview > div {
   width: 100%;
   height: 100%;
-  border-radius: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.wl-img-upload .image-square {
+  border-radius: 0;
+}
+.mainlogo .avatar-edit input + label {
+  top: 0px;
+  left: -12px;
+}
+/* input[type='range'] {
+  background: var(--primarycolor);
+  border: solid 2px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #434343;
+} */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  /* width: 40rem; */
+  height: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 4px solid hsl(197.13deg 25.02% 69.55% / 36%);
+  background: hsl(193.85deg 81.45% 66.03% / 35%);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 1rem;
+  background: hsl(0, 0%, 99%);
+  border-radius: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid hsl(140, 64%, 71%);
+  box-shadow: -50rem 0 5rem 20rem hsl(113, 72%, 72%),
+    -40rem 0 5rem 30rem hsl(143, 48%, 46%),
+    -30rem 0 2rem 25rem hsl(133, 83%, 68%),
+    -25.5rem 0 0 25rem hsl(140, 60%, 55%);
+}
+
+.login-container-margin-wrapper,
+.login-container-padding-wrapper,
+.login-form-margin-wrapper,
+.login-form-padding-wrapper,
+.message-box-margin-wrapper,
+.message-box-padding-wrapper {
+  display: flex;
+}
+.login-container-margin-wrapper input[type="number"],
+.login-container-padding-wrapper input[type="number"],
+.login-form-margin-wrapper input[type="number"],
+.login-form-padding-wrapper input[type="number"],
+.message-box-margin-wrapper input[type="number"],
+.message-box-padding-wrapper input[type="number"] {
+  width: 25%;
+}
+.login-container-margin-wrapper span {
+  align-items: center;
 }
