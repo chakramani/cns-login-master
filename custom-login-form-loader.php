@@ -9,6 +9,7 @@ function admin_login_page_enqueue()
 add_action('admin_enqueue_scripts', 'admin_login_page_enqueue');
 
 
+
 add_action('admin_menu', 'wl_custom_admin_login_form');
 function wl_custom_admin_login_form()
 {
@@ -42,16 +43,12 @@ function custom_settings_fields()
 }
 add_action('admin_init', 'custom_settings_fields');
 
-function spit_out_theme_setting_section_callback()
-{ ?>
-        <legend><span class="number">1</span>Admin Login Form</legend>
-<?php }
 
 function admin_login_logo()
 {
         $admin_login = get_option('admin_login_form');  ?>
         <fieldset>
-                <legend><span class="number">1</span> Logo Settings</legend>
+                <legend><span class="number">1</span> <?php _e('Logo Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
 
                         <div class="wl-label-title">
@@ -81,7 +78,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Logo width</label>
+                                <label for="background-bkur"><?php _e('Logo width', 'wl-login-master'); ?></label>
                         </div>
                         <div class="logo-width-wrapper">
                                 <input type='range' name=admin_login_form[logo_width] class='logo-width' value='<?php echo !empty($admin_login['logo_width']) ? $admin_login['logo_width'] : ''; ?>' min="0" max="200" />
@@ -90,7 +87,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Logo height</label>
+                                <label for="background-bkur"><?php _e('Logo height', 'wl-login-master'); ?></label>
                         </div>
                         <div class="logo-height-wrapper">
                                 <input type='range' name=admin_login_form[logo_height] class='logo-height' value='<?php echo !empty($admin_login['logo_height']) ? $admin_login['logo_height'] : ''; ?>' min="0" max="200" />
@@ -99,12 +96,12 @@ function admin_login_logo()
                 </div>
         </fieldset>
         <fieldset class="wl-background-settings">
-                <legend><span class="number">2</span> Body Background Settings</legend>
+                <legend><span class="number">2</span> <?php _e('Body Background Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
 
                         <div class="wl-label-title">
                                 <input type='hidden' id='admin_login_bg_image_hidden' name=admin_login_form[bg_image] value='<?php echo !empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''; ?>' />
-                                <label for="background-image">Background Image</label>
+                                <label for="background-image"><?php _e('Background Image', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wl-upload-box">
                                 <div class="wl-upload-btn-box">
@@ -129,7 +126,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-color">Background Color</label>
+                                <label for="background-color"><?php _e('Background Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper login-form-bg-color-wrapper">
                                 <input type='color' name=admin_login_form[bg_color] class='' value='<?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''; ?>' />
@@ -138,7 +135,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Background Blur</label>
+                                <label for="background-bkur"><?php _e('Background Blur', 'wl-login-master'); ?></label>
                         </div>
                         <div class="body-bg-image-blur-wrapper">
                                 <input type='range' name=admin_login_form[bg_blur] class='bg-blur' value='<?php echo !empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : ''; ?>' min="0" max="100" />
@@ -147,10 +144,10 @@ function admin_login_logo()
                 </div>
         </fieldset>
         <fieldset>
-                <legend><span class="number">3</span> Form Container Settings</legend>
+                <legend><span class="number">3</span> <?php _e('Form Container Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Container Width</label>
+                                <label for="background-bkur"><?php _e('Container Width', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-form-container-width-wrapper">
                                 <input type='range' name=admin_login_form[login_form_container_width] class='form-container-width' value='<?php echo !empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : ''; ?>' min="0" max="1000" />
@@ -170,7 +167,7 @@ function admin_login_logo()
                 </div> -->
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Margin</label>
+                                <label for="background-bkur"><?php _e('Margin', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-container-margin-wrapper">
                                 <input type='number' name=admin_login_form[login_container_margin_top] class='login-container-margin' value='<?php echo !empty($admin_login['login_container_margin_top']) ? $admin_login['login_container_margin_top'] : ''; ?>' max="500" placeholder="Top" />
@@ -182,7 +179,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Padding</label>
+                                <label for="background-bkur"><?php _e('Padding', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-container-padding-wrapper">
                                 <input type='number' name=admin_login_form[login_container_padding_top] class='login-container-padding' value='<?php echo !empty($admin_login['login_container_padding_top']) ? $admin_login['login_container_padding_top'] : ''; ?>' max="500" placeholder="Top" />
@@ -194,10 +191,10 @@ function admin_login_logo()
                 </div>
         </fieldset>
         <fieldset>
-                <legend><span class="number">4</span> Login Form Settings</legend>
+                <legend><span class="number">4</span> <?php _e('Login Form Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="login-form-color">Background Color</label>
+                                <label for="login-form-color"><?php _e('Background Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper login-form-color-wrapper">
                                 <input type='color' name=admin_login_form[login_box_bg_color] class='' value='<?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''; ?>' />
@@ -206,7 +203,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="text-color">Text Color</label>
+                                <label for="text-color"><?php _e('Text Color', 'wl-login-master'); ?>Text Color</label>
                         </div>
                         <div class="wrapper login-form-text-color-wrapper">
                                 <input type='color' name=admin_login_form[text_color] class='' value='<?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?>' />
@@ -247,7 +244,7 @@ function admin_login_logo()
                 </div> -->
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Margin</label>
+                                <label for="background-bkur"><?php _e('Margin', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-form-margin-wrapper">
                                 <input type='number' name=admin_login_form[login_form_margin_top] class='login-form-margin' value='<?php echo !empty($admin_login['login_form_margin_top']) ? $admin_login['login_form_margin_top'] : ''; ?>' max="500" placeholder="Top" />
@@ -259,7 +256,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Padding</label>
+                                <label for="background-bkur"><?php _e('Padding', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-form-padding-wrapper">
                                 <input type='number' name=admin_login_form[login_form_padding_top] class='login-form-padding' value='<?php echo !empty($admin_login['login_form_padding_top']) ? $admin_login['login_form_padding_top'] : ''; ?>' max="500" placeholder="Top" />
@@ -271,10 +268,10 @@ function admin_login_logo()
                 </div>
         </fieldset>
         <fieldset>
-                <legend><span class="number">5</span> Message Box Settings</legend>
+                <legend><span class="number">5</span> <?php _e('Message Box Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="lalert-box-bg-color">Background Color</label>
+                                <label for="lalert-box-bg-color"><?php _e('Background Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper message-box-bg-color-wrapper">
                                 <input type='color' name=admin_login_form[alert_box_bg_color] class='' value='<?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?>' />
@@ -283,7 +280,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="alert-box-text-color">Text Color</label>
+                                <label for="alert-box-text-color"><?php _e('Text Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper message-box-text-color-wrapper">
                                 <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>' />
@@ -292,7 +289,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Width</label>
+                                <label for="background-bkur"><?php _e('Width', 'wl-login-master'); ?></label>
                         </div>
                         <div class="message-box-width-wrapper">
                                 <input type='range' name=admin_login_form[message_box_width] class='message-box-width' value='<?php echo !empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : ''; ?>' min="0" max="100" />
@@ -312,7 +309,7 @@ function admin_login_logo()
                 </div> -->
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Margin</label>
+                                <label for="background-bkur"><?php _e('Margin', 'wl-login-master'); ?></label>
                         </div>
                         <div class="message-box-margin-wrapper">
                                 <input type='number' name=admin_login_form[message_box_margin_top] class='message-box-margin' value='<?php echo !empty($admin_login['message_box_margin_top']) ? $admin_login['message_box_margin_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
@@ -324,7 +321,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="background-bkur">Padding</label>
+                                <label for="background-bkur"><?php _e('Padding', 'wl-login-master'); ?></label>
                         </div>
                         <div class="message-box-padding-wrapper">
                                 <input type='number' name=admin_login_form[message_box_padding_top] class='message-box-padding' value='<?php echo !empty($admin_login['message_box_padding_top']) ? $admin_login['message_box_padding_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
@@ -337,10 +334,10 @@ function admin_login_logo()
 
         </fieldset>
         <fieldset class="background-text-settings">
-                <legend><span class="number">6</span> Link Settings</legend>
+                <legend><span class="number">6</span> <?php _e('Link Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="link-font-size">Font Size</label>
+                                <label for="link-font-size"><?php _e('Font Size', 'wl-login-master'); ?></label>
                         </div>
                         <div class="link-font-size-wrapper">
                                 <input type='range' name=admin_login_form[link_font_size] class='link-font-size' value='<?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : ''; ?>' min="0" max="100" />
@@ -349,7 +346,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="link-text-color">Link Text Color</label>
+                                <label for="link-text-color"><?php _e('Link Text Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper link-text-color-wrapper">
                                 <input type='color' name=admin_login_form[link_text_color] class='' value='<?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?>' />
@@ -358,10 +355,10 @@ function admin_login_logo()
                 </div>
         </fieldset>
         <fieldset class="background-text-settings">
-                <legend><span class="number">7</span> Login Button Settings</legend>
+                <legend><span class="number">7</span> <?php _e('Login Button Settings', 'wl-login-master'); ?></legend>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="login-btn-bg-color">Background Color</label>
+                                <label for="login-btn-bg-color"><?php _e('Background Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wrapper login-btn-bg-color-wrapper">
                                 <input type='color' name=admin_login_form[login_btn_bg_color] class='wl-login-btn-bg-color' value='<?php echo !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?>' />
@@ -370,7 +367,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="login-btn-color">Color</label>
+                                <label for="login-btn-color"><?php _e('Color', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-btn-color-wrapper">
                                 <input type='color' name=admin_login_form[login_btn_color] class='wl-login-btn-text-color' value='<?php echo !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?>' />
@@ -379,7 +376,7 @@ function admin_login_logo()
                 </div>
                 <div class="wl-login">
                         <div class="wl-label-title">
-                                <label for="login-btn">Font Size</label>
+                                <label for="login-btn"><?php _e('Font Size', 'wl-login-master'); ?></label>
                         </div>
                         <div class="login-btn-font-size-wrapper">
                                 <input type='range' name=admin_login_form[link_font_size] class='login-btn-font-size' value='<?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : ''; ?>' min="0" max="100" />
