@@ -7,8 +7,8 @@ function wl_admin_login_page_enqueue()
         if ('toplevel_page_wl_login_master' === $screen->base && $_GET['page'] === 'wl_login_master') {
                 wp_enqueue_style('wl_admin_login_form_css_admin', plugin_dir_url(__FILE__) . '/style.css');
 
-        wp_enqueue_media();
-        wp_enqueue_script('wl_admin_login_form_js_admin', plugin_dir_url(__FILE__) . 'main.js');
+                wp_enqueue_media();
+                wp_enqueue_script('wl_admin_login_form_js_admin', plugin_dir_url(__FILE__) . 'main.js');
         }
 }
 add_action('admin_enqueue_scripts', 'wl_admin_login_page_enqueue');
@@ -57,7 +57,7 @@ function wl_admin_login_logo()
                 <div class="wl-login">
 
                         <div class="wl-label-title">
-                                <input type='hidden' id='admin_login_logo_hidden' name=admin_login_form[logo] value='<?php echo $admin_login['logo']; ?>' />
+                                <input type='hidden' id='admin_login_logo_hidden' name=admin_login_form[logo] value='<?php echo !empty($admin_login['logo']) ? $admin_login['logo'] : ''; ?>' />
                                 <label for="logo"><?php _e('Logo', 'wl-login-master'); ?></label>
                         </div>
                         <div class="wl-upload-box">
@@ -153,16 +153,16 @@ function wl_admin_login_logo()
                         </div>
                         <div class="body-bg-image-repeat-wrapper">
                                 <select name="admin_login_form[bg_repeat]" class="bg-repeat">
-                                        <option value="inherit" <?php selected($admin_login['bg_repeat'], 'inherit'); ?>><?php _e('Inherit', 'wl-login-master'); ?></option>
-                                        <option value="initital" <?php selected($admin_login['bg_repeat'], 'initital'); ?>><?php _e('Initital', 'wl-login-master'); ?></option>
-                                        <option value="no-repeat" <?php selected($admin_login['bg_repeat'], 'no-repeat'); ?>><?php _e('No-repeat', 'wl-login-master'); ?></option>
-                                        <option value="repeat" <?php selected($admin_login['bg_repeat'], 'repeat'); ?>><?php _e('Repeat', 'wl-login-master'); ?></option>
-                                        <option value="repeat-x" <?php selected($admin_login['bg_repeat'], 'repeat-x'); ?>><?php _e('Repeat-x', 'wl-login-master'); ?></option>
-                                        <option value="repeat-y" <?php selected($admin_login['bg_repeat'], 'repeat-y'); ?>><?php _e('Repeat-y', 'wl-login-master'); ?></option>
-                                        <option value="revert" <?php selected($admin_login['bg_repeat'], 'revert'); ?>><?php _e('Revert', 'wl-login-master'); ?></option>
-                                        <option value="round" <?php selected($admin_login['bg_repeat'], 'round'); ?>><?php _e('Round', 'wl-login-master'); ?></option>
-                                        <option value="space" <?php selected($admin_login['bg_repeat'], 'space'); ?>><?php _e('Space', 'wl-login-master'); ?></option>
-                                        <option value="unset" <?php selected($admin_login['bg_repeat'], 'unset'); ?>><?php _e('Unset', 'wl-login-master'); ?></option>
+                                        <option value="inherit" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'inherit'); ?>><?php _e('Inherit', 'wl-login-master'); ?></option>
+                                        <option value="initital" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'initital'); ?>><?php _e('Initital', 'wl-login-master'); ?></option>
+                                        <option value="no-repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'no-repeat'); ?>><?php _e('No-repeat', 'wl-login-master'); ?></option>
+                                        <option value="repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat'); ?>><?php _e('Repeat', 'wl-login-master'); ?></option>
+                                        <option value="repeat-x" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-x'); ?>><?php _e('Repeat-x', 'wl-login-master'); ?></option>
+                                        <option value="repeat-y" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-y'); ?>><?php _e('Repeat-y', 'wl-login-master'); ?></option>
+                                        <option value="revert" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'revert'); ?>><?php _e('Revert', 'wl-login-master'); ?></option>
+                                        <option value="round" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'round'); ?>><?php _e('Round', 'wl-login-master'); ?></option>
+                                        <option value="space" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'space'); ?>><?php _e('Space', 'wl-login-master'); ?></option>
+                                        <option value="unset" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'unset'); ?>><?php _e('Unset', 'wl-login-master'); ?></option>
                                 </select>
                         </div>
                 </div>
@@ -172,13 +172,13 @@ function wl_admin_login_logo()
                         </div>
                         <div class="body-bg-image-size-wrapper">
                                 <select name="admin_login_form[bg_size]" class="bg-size">
-                                        <option value="auto" <?php selected($admin_login['bg_size'], 'auto'); ?>><?php _e('Auto', 'wl-login-master'); ?></option>
-                                        <option value="contain" <?php selected($admin_login['bg_size'], 'contain'); ?>><?php _e('Contain', 'wl-login-master'); ?></option>
-                                        <option value="cover" <?php selected($admin_login['bg_size'], 'cover'); ?>><?php _e('Cover', 'wl-login-master'); ?></option>
-                                        <option value="inherit" <?php selected($admin_login['bg_size'], 'inherit'); ?>><?php _e('Inherit', 'wl-login-master'); ?></option>
-                                        <option value="initital" <?php selected($admin_login['bg_size'], 'initital'); ?>><?php _e('Initital', 'wl-login-master'); ?></option>
-                                        <option value="revert" <?php selected($admin_login['bg_size'], 'revert'); ?>><?php _e('Revert', 'wl-login-master'); ?></option>
-                                        <option value="unset" <?php selected($admin_login['bg_size'], 'unset'); ?>><?php _e('Unset', 'wl-login-master'); ?></option>
+                                        <option value="auto" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'auto'); ?>><?php _e('Auto', 'wl-login-master'); ?></option>
+                                        <option value="contain" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'contain'); ?>><?php _e('Contain', 'wl-login-master'); ?></option>
+                                        <option value="cover" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'cover'); ?>><?php _e('Cover', 'wl-login-master'); ?></option>
+                                        <option value="inherit" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'inherit'); ?>><?php _e('Inherit', 'wl-login-master'); ?></option>
+                                        <option value="initital" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'initital'); ?>><?php _e('Initital', 'wl-login-master'); ?></option>
+                                        <option value="revert" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'revert'); ?>><?php _e('Revert', 'wl-login-master'); ?></option>
+                                        <option value="unset" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'unset'); ?>><?php _e('Unset', 'wl-login-master'); ?></option>
                                 </select>
                         </div>
                 </div>
