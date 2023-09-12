@@ -4,7 +4,7 @@ function my_login_logo()
 {
     $admin_login = get_option('admin_login_form'); ?>
     <style type="text/css">
-        body.wl-body #login {
+        body.cns-body #login {
             width: <?php echo !empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : '320'; ?>px;
             height: auto;
             margin: <?php echo !empty($admin_login['login_container_margin_top']) ? $admin_login['login_container_margin_top'] : ''; ?>px auto <?php echo !empty($admin_login['login_container_margin_bottom']) ? $admin_login['login_container_margin_bottom'] : ''; ?>px auto;
@@ -12,7 +12,7 @@ function my_login_logo()
         }
 
         /* logo */
-        body.wl-body #login h1 a {
+        body.cns-body #login h1 a {
             background-image: url("<?php echo !empty($admin_login['logo']) ? $admin_login['logo'] : plugin_dir_url(__FILE__) . '/assets/images/wordpress-logo.svg'; ?>");
             width: <?php echo !empty($admin_login['logo_width']) ? $admin_login['logo_width'] : '84'; ?>px;
             height: <?php echo !empty($admin_login['logo_height']) ? $admin_login['logo_height'] : '84'; ?>px;
@@ -23,7 +23,7 @@ function my_login_logo()
         }
 
         /* background image and background color */
-        body.wl-body.login {
+        body.cns-body.login {
             background-image: url("<?php echo !empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''; ?>");
             background-color: <?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : '#f0f0f1'; ?>;
             backdrop-filter: blur(<?php echo !empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : ''; ?>px);
@@ -32,7 +32,7 @@ function my_login_logo()
         }
 
         /* login form background color */
-        body.wl-body #loginform {
+        body.cns-body #loginform {
             margin: <?php echo !empty($admin_login['login_form_margin_top']) ? $admin_login['login_form_margin_top'] : '20'; ?>px <?php echo !empty($admin_login['login_form_margin_right']) ? $admin_login['login_form_margin_right'] : ''; ?>px <?php echo !empty($admin_login['login_form_margin_bottom']) ? $admin_login['login_form_margin_bottom'] : ''; ?>px <?php echo !empty($admin_login['login_form_margin_left']) ? $admin_login['login_form_margin_left'] : '0'; ?>px;
             padding: <?php echo !empty($admin_login['login_form_padding_top']) ? $admin_login['login_form_padding_top'] : '26'; ?>px <?php echo !empty($admin_login['login_form_padding_right']) ? $admin_login['login_form_padding_right'] : '24'; ?>px <?php echo !empty($admin_login['login_form_padding_bottom']) ? $admin_login['login_form_padding_bottom'] : '34'; ?>px <?php echo !empty($admin_login['login_form_padding_left']) ? $admin_login['login_form_padding_left'] : ''; ?>px;
             background: <?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : '#fff'; ?>;
@@ -41,9 +41,9 @@ function my_login_logo()
 
 
         /* alert message background text color and background color */
-        body.wl-body.login #login_error,
-        body.wl-body.login .message,
-        body.wl-body.login .success {
+        body.cns-body.login #login_error,
+        body.cns-body.login .message,
+        body.cns-body.login .success {
             width: <?php echo !empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] . '%' : ''; ?>;
             height: auto;
             border-left: 4px solid #72aee6;
@@ -55,18 +55,18 @@ function my_login_logo()
             color: <?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>;
         }
 
-        body.wl-body.login div#login label {
+        body.cns-body.login div#login label {
             font-size: <?php echo !empty($admin_login['font_size']) ? $admin_login['font_size'] : ''; ?>px;
             color: <?php echo '#' . !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?>;
         }
 
-        body.wl-body.login div#login #nav a,
-        body.wl-body.login div#login #backtoblog a {
+        body.cns-body.login div#login #nav a,
+        body.cns-body.login div#login #backtoblog a {
             font-size: <?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : '13'; ?>px;
             color: <?php echo '#' . !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : '#50575e'; ?>;
         }
 
-        body.wl-body #loginform #wp-submit {
+        body.cns-body #loginform #wp-submit {
             font-size: <?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : '13'; ?>px;
             color: <?php echo '#' . !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?>;
             background: <?php echo '#' . !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?>;

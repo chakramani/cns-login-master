@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: CM Custom Login
+Plugin Name: CNS Login Master
 Plugin URI: chakramanijoshi@gmail.com
 Description: Custom Admin Login 
 Version: 1.0.0
-Author: codepixelz
-Text Domain: wl-login-master
+Author: Chakramani Joshi
+Text Domain: cns-login-master
 Author URI: chakramanijoshi@gmail.com
 */
 
@@ -21,7 +21,7 @@ require $asset_file;
 
 function login_classes($classes)
 {
-        $classes[] = 'wl-body';
+        $classes[] = 'cns-body';
         return $classes;
 }
 add_filter('login_body_class', 'login_classes');

@@ -1,44 +1,73 @@
 :root {
   --primarycolor: #000;
-  --secondarycolor: #36393B;
+  --secondarycolor: #36393b;
   --lightgraycolor: #425357;
   --whitecolor: #fff;
   --headingbg: #dddddd;
-  --hitgraycolor: #A9A9A9;
-  --watercolor: #EBF2FF;
+  --hitgraycolor: #a9a9a9;
+  --watercolor: #ebf2ff;
 }
-.wl-header {
-  text-align: center;
-  /* background: var(--primarycolor); */
-  padding: 20px 0;
-  max-width: 768px;
-  margin: 0 auto;
+.cns-header {
+  padding: 20px 15px;
+  background: #23282d;
+  border-bottom: 3px solid #00a0d2;
 }
-.wl-header img {
+.cns-header img {
   width: 200px;
   height: auto;
 }
+.cns-sub-header {
+  background: var(--watercolor);
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.cns-sub-header p {
+  padding: 15px 0;
+  margin: 0;
+}
 /* form */
 
-#wl-form {
-  max-width: 768px;
-  margin: 0 auto 10px auto;
-  padding: 0;
-  background: #f4f7f8;
-  border-radius: 8px;
+.cns-wrapper {
+  background-color: #fff;
+  background-repeat: repeat-x;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #fff),
+    color-stop(100%, #f2f2f2)
+  );
+  background-image: -webkit-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff", endColorstr="#f2f2f2", GradientType=0);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fff),
+    to(#f2f2f2)
+  );
+  background-image: linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);
+  border: 1px solid #dedede;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+  overflow: hidden;
 }
-.wl-upload-box {
+.cns-upload-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#wl-form table td,
-#wl-form table th {
+#cns-form table td,
+#cns-form table th {
   border: 1px solid #d7d7d7;
   padding: 5px 20px;
   margin: 0;
 }
-#wl-form input[type="color"] {
+#cns-form input[type="color"] {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 16px;
@@ -48,36 +77,35 @@
   width: 25%;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 }
-input.wl-upload-btn {
+input.cns-upload-btn {
   background: var(--primarycolor);
   color: var(--whitecolor);
   border: none;
 }
-input.wl-upload-btn:hover {
+input.cns-upload-btn:hover {
   background: #f4f7f8;
   color: var(--primarycolor);
 }
-#wl-form input[type="submit"] {
+#cns-form input[type="submit"] {
   color: #fff;
   background-color: var(--primarycolor);
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  width: 100%;
   border: 1px solid var(--primarycolor);
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
 }
 
-#wl-form fieldset {
+#cns-form fieldset {
   margin-bottom: 30px;
   border: none;
   overflow: hidden;
 }
 
-#wl-form legend {
+#cns-form legend {
   font-size: 1.4em;
   margin-bottom: 10px;
   background: var(--headingbg);
@@ -86,7 +114,7 @@ input.wl-upload-btn:hover {
   font-weight: bold;
 }
 
-#wl-form label {
+#cns-form label {
   display: flex;
   font-weight: normal;
   font-size: 16px;
@@ -96,12 +124,12 @@ input.wl-upload-btn:hover {
 .pre-upload-logo img {
   margin-left: 10px;
 }
-#wl-form label.light {
+#cns-form label.light {
   font-weight: 300;
   display: inline;
 }
 
-#wl-form .number {
+#cns-form .number {
   background-color: var(--primarycolor);
   color: #fff;
   height: 30px;
@@ -117,25 +145,25 @@ input.wl-upload-btn:hover {
 #image_preview_login_logo {
   background-size: contain;
 }
-#wl-form h1 {
+#cns-form h1 {
   margin: 0 0 30px 0;
   text-align: center;
   font-weight: normal;
 }
-#wl-form .wl_table {
+#cns-form .cns_table {
   width: 100%;
 }
 
-#wl-form .wl_table tr th {
+#cns-form .cns_table tr th {
   text-align: left;
 }
 
-#wl-form p {
+#cns-form p {
   margin: 0;
 }
 
-#wl-form .upload__inputfile,
-#wl-form .upload__inputfilebg {
+#cns-form .upload__inputfile,
+#cns-form .upload__inputfilebg {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -143,7 +171,7 @@ input.wl-upload-btn:hover {
   position: absolute;
   z-index: -1;
 }
-#wl-form .wl-upload-btn {
+#cns-form .cns-upload-btn {
   /* display: inline-block; */
   font-weight: 600;
   color: #fff;
@@ -159,25 +187,25 @@ input.wl-upload-btn:hover {
   line-height: 26px;
   font-size: 14px;
 }
-#wl-form .wl-upload-btn:hover {
+#cns-form .cns-upload-btn:hover {
   background-color: unset;
   color: var(--primarycolor);
   transition: all 0.3s ease;
 }
-#wl-form .wl-upload-btn-box {
+#cns-form .cns-upload-btn-box {
   margin-bottom: 10px;
 }
-#wl-form .upload__img-wrap {
+#cns-form .upload__img-wrap {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
 }
-#wl-form .upload__img-box {
+#cns-form .upload__img-box {
   width: 200px;
   padding: 0 10px;
   margin-bottom: 12px;
 }
-#wl-form .upload__img-close {
+#cns-form .upload__img-close {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -190,13 +218,13 @@ input.wl-upload-btn:hover {
   z-index: 1;
   cursor: pointer;
 }
-#wl-form .upload__img-close:after {
+#cns-form .upload__img-close:after {
   content: "✖";
   font-size: 14px;
   color: white;
 }
 
-#wl-form .img-bg {
+#cns-form .img-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -205,50 +233,56 @@ input.wl-upload-btn:hover {
   height: 100px;
 }
 
-.wl-color {
+.cns-color {
   display: flex;
 }
 
-.wl-login {
+.cns-login {
   border-bottom: 1px solid var(--graycolor);
   padding: 10px 20px;
   clear: both;
 }
-.wl-login img {
+.cns-login img {
   width: 80px;
   height: 80px;
   object-fit: cover;
 }
-.wl-label-title {
+.cns-label-title {
   float: left;
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   line-height: 40px;
 }
-.wl-label-title label {
+.login-form-wrapper {
+  float: left;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.cns-label-title label {
   float: left;
   width: 60%;
   font-weight: bold;
 }
 
-.wl-img-upload {
+.cns-img-upload {
   position: relative;
   max-width: 205px;
   /* margin: 50px auto; */
 }
 
-.wl-img-upload .avatar-edit {
+.cns-img-upload .avatar-edit {
   position: absolute;
   right: 12px;
   z-index: 1;
   top: 10px;
 }
 
-.wl-img-upload .avatar-edit input {
+.cns-img-upload .avatar-edit input {
   display: none;
 }
-.wl-img-upload .avatar-edit input + label {
+.cns-img-upload .avatar-edit input + label {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -264,12 +298,12 @@ input.wl-upload-btn:hover {
   top: -15px;
   position: absolute;
 }
-.wl-img-upload .avatar-edit input + label:hover {
+.cns-img-upload .avatar-edit input + label:hover {
   background: #f1f1f1;
   border-color: #d6d6d6;
 }
-.wl-img-upload .avatar-edit input + #admin_login_logo:after,
-.wl-img-upload .avatar-edit input + #admin_login_background_imge:after {
+.cns-img-upload .avatar-edit input + #admin_login_logo:after,
+.cns-img-upload .avatar-edit input + #admin_login_background_imge:after {
   content: "\f464";
   color: #757575;
   font-family: dashicons;
@@ -342,11 +376,12 @@ input.wl-upload-btn:hover {
   text-align: center;
   margin: auto;
 }
-#delete_admin_login_logo:hover,#delete_admin_login_background_imge:hover {
-    background: #f1f1f1;
-    border-color: #d6d6d6;
+#delete_admin_login_logo:hover,
+#delete_admin_login_background_imge:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
 }
-.wl-img-upload .avatar-preview {
+.cns-img-upload .avatar-preview {
   width: 100px;
   height: 100px;
   position: relative;
@@ -354,14 +389,14 @@ input.wl-upload-btn:hover {
   border: 6px solid #f8f8f8;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.wl-img-upload .avatar-preview > div {
+.cns-img-upload .avatar-preview > div {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.wl-img-upload .image-square {
+.cns-img-upload .image-square {
   border-radius: 0;
 }
 .mainlogo .avatar-edit input + label {
@@ -415,8 +450,8 @@ input[type="range"]::-webkit-slider-thumb {
 .login-form-padding-wrapper span,
 .message-box-margin-wrapper span,
 .message-box-padding-wrapper span {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
 }
 .login-container-margin-wrapper input[type="number"],
 .login-container-padding-wrapper input[type="number"],
@@ -430,28 +465,35 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
 }
 
-.login-form-bg-color-wrapper,.login-form-color-wrapper,.login-form-text-color-wrapper,.message-box-bg-color-wrapper,.message-box-text-color-wrapper,.link-text-color-wrapper,.login-btn-bg-color-wrapper,.login-btn-color-wrapper {
+.login-form-bg-color-wrapper,
+.login-form-color-wrapper,
+.login-form-text-color-wrapper,
+.message-box-bg-color-wrapper,
+.message-box-text-color-wrapper,
+.link-text-color-wrapper,
+.login-btn-bg-color-wrapper,
+.login-btn-color-wrapper {
   display: flex;
   align-items: center;
   gap: 3px;
 }
 
-#wl-form .color-code {
+#cns-form .color-code {
   padding: 6px;
   background: var(--primarycolor);
   color: var(--whitecolor);
   cursor: copy;
 }
-#wl-form .color-code.copied {
+#cns-form .color-code.copied {
   padding: 6px;
   background: var(--primarycolor);
   cursor: copy;
 }
 
-.copied-message{
+.copied-message {
   display: none;
 }
-.copied-message.active{
+.copied-message.active {
   display: block;
 }
 

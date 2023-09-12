@@ -57,9 +57,9 @@ jQuery(document).ready(function () {
   });
 
   //color code
-  jQuery("#wl-form input[type='color']").on("input", function () {
+  jQuery("#cns-form input[type='color']").on("input", function () {
     var color_code = this.value;
-    jQuery(this).closest(".wl-login").find(".color-code").text(color_code);
+    jQuery(this).closest(".cns-login").find(".color-code").text(color_code);
   });
   //copy color code
   jQuery(".color-code").on("click", function () {
