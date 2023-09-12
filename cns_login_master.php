@@ -14,8 +14,8 @@ if (!defined('ABSPATH')) {
         exit;
 };
 /* require plugin loder file */
-$init_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cpm-login-master" . DIRECTORY_SEPARATOR  . "custom-login-form-loader.php";
-$asset_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cpm-login-master" . DIRECTORY_SEPARATOR  . "cpm-assets.php";
+$init_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cns-login-master" . DIRECTORY_SEPARATOR  . "custom-login-form-loader.php";
+$asset_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cns-login-master" . DIRECTORY_SEPARATOR  . "cns-assets.php";
 require $init_file;
 require $asset_file;
 

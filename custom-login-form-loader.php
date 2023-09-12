@@ -18,16 +18,18 @@ add_action('admin_enqueue_scripts', 'cns_admin_login_page_enqueue');
 add_action('admin_menu', 'cns_custom_admin_login_form');
 function cns_custom_admin_login_form()
 {
-        $cns_icon = plugin_dir_url(__FILE__) . '/assets/images/cns-dashicon.png';
+        $cns_icon = plugin_dir_url(__FILE__) . '/assets/images/cns-dashicon.png';;
         add_menu_page('CNS Login Master', 'CNS Login Master', 'manage_options', 'cns_login_master', 'cns_custom_login_page', $cns_icon);
 }
 function cns_custom_login_page()
-{ ?>
+{ 
+        $logo = esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) );
+        ?>
         <div class="wrap cns-wrapper">
 
 
                 <div class="cns-header">
-                        <img src="<?php echo plugin_dir_url(__FILE__) . '/assets/images/cns-logo.svg' ?>" alt="White Label" class="cns-logo" width="200">
+                        <img src="<?php echo $logo; ?>" alt="White Label" class="cns-logo" width="200">
                 </div>
                 <div class="cns-sub-header">
                         <p><?php _e('This plugin helps you to customize the admin login page.', 'cns-login-master'); ?></p>
