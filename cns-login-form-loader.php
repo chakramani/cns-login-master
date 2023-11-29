@@ -71,7 +71,7 @@ function cns_custom_login_page()
 
                 <div class="cns-sub-header">
 
-                        <p><?php _e('This plugin helps you to customize the admin login page.', 'cns-login-master'); ?></p>
+                        <p><?php __('This plugin helps you to customize the admin login page.', 'cns-login-master'); ?></p>
 
                 </div>
 
@@ -91,7 +91,7 @@ function cns_custom_login_page()
 
                                 </div>
 
-                                <p class="cns-copyright"><?php _e('Made with', 'cns-login-master'); ?> <span>&hearts;</span> <?php _e('by CNS', 'cns-login-master'); ?></p>
+                                <p class="cns-copyright"><?php __('Made with', 'cns-login-master'); ?> <span>&hearts;</span> <?php __('by CNS', 'cns-login-master'); ?></p>
 
                         </fieldset>
 
@@ -150,43 +150,43 @@ function cns_admin_login_logo()
 
                                                         <li>
 
-                                                                <a href="#cns-tab-1" class="cns-tab-link active"> <i class="dashicons dashicons-wordpress"></i><span class="tab-label"><?php _e('Logo', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-1" class="cns-tab-link active"> <i class="dashicons dashicons-wordpress"></i><span class="tab-label"><?php __('Logo', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-2" class="cns-tab-link"> <i class="dashicons dashicons-media-default"></i> <span class="tab-label"><?php _e('Body Background', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-2" class="cns-tab-link"> <i class="dashicons dashicons-media-default"></i> <span class="tab-label"><?php __('Body Background', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-3" class="cns-tab-link"> <i class="dashicons dashicons-menu"></i> <span class="tab-label"><?php _e('Form Container', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-3" class="cns-tab-link"> <i class="dashicons dashicons-menu"></i> <span class="tab-label"><?php __('Form Container', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-4" class="cns-tab-link"> <i class="dashicons dashicons-unlock"></i> <span class="tab-label"><?php _e('Login Form', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-4" class="cns-tab-link"> <i class="dashicons dashicons-unlock"></i> <span class="tab-label"><?php __('Login Form', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-5" class="cns-tab-link"> <i class="dashicons dashicons-info"></i> <span class="tab-label"><?php _e('Message Box', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-5" class="cns-tab-link"> <i class="dashicons dashicons-info"></i> <span class="tab-label"><?php __('Message Box', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-6" class="cns-tab-link"> <i class="dashicons dashicons-admin-links"></i> <span class="tab-label"><?php _e('Link', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-6" class="cns-tab-link"> <i class="dashicons dashicons-admin-links"></i> <span class="tab-label"><?php __('Link', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
                                                         <li>
 
-                                                                <a href="#cns-tab-7" class="cns-tab-link"> <i class="dashicons dashicons-button"></i> <span class="tab-label"><?php _e('Button', 'cns-login-master'); ?></span></a>
+                                                                <a href="#cns-tab-7" class="cns-tab-link"> <i class="dashicons dashicons-button"></i> <span class="tab-label"><?php __('Button', 'cns-login-master'); ?></span></a>
 
                                                         </li>
 
@@ -202,13 +202,13 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2><?php _e('Logo', 'cns-login-master'); ?></h2>
+                                                                                <h2><?php __('Logo', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
                                                                                         <input type='hidden' id='admin_login_logo_hidden' name=admin_login_form[logo] value='<?php echo !empty($admin_login['logo']) ? $admin_login['logo'] : ''; ?>' />
 
-                                                                                        <label for="logo"><?php _e('Logo Settings', 'cns-login-master'); ?></label>
+                                                                                        <label for="logo"><?php __('Logo Settings', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -258,7 +258,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Logo width', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Logo width', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -276,7 +276,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Logo height', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Logo height', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -304,13 +304,13 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Body Background Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Body Background Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
                                                                                         <input type='hidden' id='admin_login_bg_image_hidden' name=admin_login_form[bg_image] value='<?php echo !empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''; ?>' />
 
-                                                                                        <label for="background-image"><?php _e('Background Image', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-image"><?php __('Background Image', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -360,7 +360,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-color"><?php _e('Background Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-color"><?php __('Background Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -378,7 +378,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Background Blur', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Background Blur', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -396,7 +396,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Background Repeat', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Background Repeat', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -404,25 +404,25 @@ function cns_admin_login_logo()
 
                                                                                         <select name="admin_login_form[bg_repeat]" class="bg-repeat">
 
-                                                                                                <option value="inherit" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'inherit'); ?>><?php _e('Inherit', 'cns-login-master'); ?></option>
+                                                                                                <option value="inherit" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'inherit'); ?>><?php __('Inherit', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="initital" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'initital'); ?>><?php _e('Initital', 'cns-login-master'); ?></option>
+                                                                                                <option value="initital" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'initital'); ?>><?php __('Initital', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="no-repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'no-repeat'); ?>><?php _e('No-repeat', 'cns-login-master'); ?></option>
+                                                                                                <option value="no-repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'no-repeat'); ?>><?php __('No-repeat', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat'); ?>><?php _e('Repeat', 'cns-login-master'); ?></option>
+                                                                                                <option value="repeat" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat'); ?>><?php __('Repeat', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="repeat-x" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-x'); ?>><?php _e('Repeat-x', 'cns-login-master'); ?></option>
+                                                                                                <option value="repeat-x" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-x'); ?>><?php __('Repeat-x', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="repeat-y" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-y'); ?>><?php _e('Repeat-y', 'cns-login-master'); ?></option>
+                                                                                                <option value="repeat-y" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'repeat-y'); ?>><?php __('Repeat-y', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="revert" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'revert'); ?>><?php _e('Revert', 'cns-login-master'); ?></option>
+                                                                                                <option value="revert" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'revert'); ?>><?php __('Revert', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="round" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'round'); ?>><?php _e('Round', 'cns-login-master'); ?></option>
+                                                                                                <option value="round" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'round'); ?>><?php __('Round', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="space" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'space'); ?>><?php _e('Space', 'cns-login-master'); ?></option>
+                                                                                                <option value="space" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'space'); ?>><?php __('Space', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="unset" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'unset'); ?>><?php _e('Unset', 'cns-login-master'); ?></option>
+                                                                                                <option value="unset" <?php selected(!empty($admin_login['bg_repeat']) ? $admin_login['bg_repeat'] : '', 'unset'); ?>><?php __('Unset', 'cns-login-master'); ?></option>
 
                                                                                         </select>
 
@@ -434,7 +434,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Background Size', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Background Size', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -442,19 +442,19 @@ function cns_admin_login_logo()
 
                                                                                         <select name="admin_login_form[bg_size]" class="bg-size">
 
-                                                                                                <option value="auto" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'auto'); ?>><?php _e('Auto', 'cns-login-master'); ?></option>
+                                                                                                <option value="auto" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'auto'); ?>><?php __('Auto', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="contain" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'contain'); ?>><?php _e('Contain', 'cns-login-master'); ?></option>
+                                                                                                <option value="contain" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'contain'); ?>><?php __('Contain', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="cover" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'cover'); ?>><?php _e('Cover', 'cns-login-master'); ?></option>
+                                                                                                <option value="cover" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'cover'); ?>><?php __('Cover', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="inherit" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'inherit'); ?>><?php _e('Inherit', 'cns-login-master'); ?></option>
+                                                                                                <option value="inherit" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'inherit'); ?>><?php __('Inherit', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="initital" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'initital'); ?>><?php _e('Initital', 'cns-login-master'); ?></option>
+                                                                                                <option value="initital" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'initital'); ?>><?php __('Initital', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="revert" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'revert'); ?>><?php _e('Revert', 'cns-login-master'); ?></option>
+                                                                                                <option value="revert" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'revert'); ?>><?php __('Revert', 'cns-login-master'); ?></option>
 
-                                                                                                <option value="unset" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'unset'); ?>><?php _e('Unset', 'cns-login-master'); ?></option>
+                                                                                                <option value="unset" <?php selected(!empty($admin_login['bg_size']) ? $admin_login['bg_size'] : '', 'unset'); ?>><?php __('Unset', 'cns-login-master'); ?></option>
 
                                                                                         </select>
 
@@ -482,11 +482,11 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Form Container Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Form Container Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Container Width', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Container Width', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -506,7 +506,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Margin', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Margin', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -530,7 +530,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-blur"><?php _e('Padding', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-blur"><?php __('Padding', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -554,7 +554,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-blur"><?php _e('Alignment', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-blur"><?php __('Alignment', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -562,7 +562,7 @@ function cns_admin_login_logo()
 
                                                                                         <div class="frm-align">
 
-                                                                                                <label for="Left"><?php _e('Left', 'cns-login-master'); ?></label>
+                                                                                                <label for="Left"><?php __('Left', 'cns-login-master'); ?></label>
 
                                                                                                 <input type='radio' name=admin_login_form[login_form_alignment] class='logi-form-align' value='Left' min="0" max="500" <?php checked(!empty($admin_login['login_form_alignment']) ? $admin_login['login_form_alignment'] : '', 'Left'); ?> />
 
@@ -570,7 +570,7 @@ function cns_admin_login_logo()
 
                                                                                         <div class="frm-align">
 
-                                                                                                <label for="Center"><?php _e('Center', 'cns-login-master'); ?></label>
+                                                                                                <label for="Center"><?php __('Center', 'cns-login-master'); ?></label>
 
                                                                                                 <input type='radio' name=admin_login_form[login_form_alignment] class='logi-form-align' value='Center' min="0" max="500" <?php checked(!empty($admin_login['login_form_alignment']) ? $admin_login['login_form_alignment'] : '', 'Center'); ?> />
 
@@ -578,7 +578,7 @@ function cns_admin_login_logo()
 
                                                                                         <div class="frm-align">
 
-                                                                                                <label for="Right"><?php _e('Right', 'cns-login-master'); ?></label>
+                                                                                                <label for="Right"><?php __('Right', 'cns-login-master'); ?></label>
 
                                                                                                 <input type='radio' name=admin_login_form[login_form_alignment] class='logi-form-align' value='Right' min="0" max="500" <?php checked(!empty($admin_login['login_form_alignment']) ? $admin_login['login_form_alignment'] : '', 'Right'); ?> />
 
@@ -604,11 +604,11 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Login Form Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Login Form Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="login-form-color"><?php _e('Background Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="login-form-color"><?php __('Background Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -626,7 +626,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="text-color"><?php _e('Text Color', 'cns-login-master'); ?>Text Color</label>
+                                                                                        <label for="text-color"><?php __('Text Color', 'cns-login-master'); ?>Text Color</label>
 
                                                                                 </div>
 
@@ -664,7 +664,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Margin', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Margin', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -688,7 +688,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Padding', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Padding', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -724,11 +724,11 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Message Box Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Message Box Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="lalert-box-bg-color"><?php _e('Background Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="lalert-box-bg-color"><?php __('Background Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -746,7 +746,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="alert-box-text-color"><?php _e('Text Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="alert-box-text-color"><?php __('Text Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -764,7 +764,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Width', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Width', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -784,7 +784,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Margin', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Margin', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -808,7 +808,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Padding', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Padding', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -846,11 +846,11 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Link Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Link Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="link-font-size"><?php _e('Font Size', 'cns-login-master'); ?></label>
+                                                                                        <label for="link-font-size"><?php __('Font Size', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -868,7 +868,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="link-text-color"><?php _e('Link Text Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="link-text-color"><?php __('Link Text Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -896,11 +896,11 @@ function cns_admin_login_logo()
 
                                                                         <div class="cns-login">
 
-                                                                                <h2> <?php _e('Login Button Settings', 'cns-login-master'); ?></h2>
+                                                                                <h2> <?php __('Login Button Settings', 'cns-login-master'); ?></h2>
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="login-btn-bg-color"><?php _e('Background Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="login-btn-bg-color"><?php __('Background Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -918,7 +918,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="login-btn-color"><?php _e('Color', 'cns-login-master'); ?></label>
+                                                                                        <label for="login-btn-color"><?php __('Color', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -936,7 +936,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="login-btn"><?php _e('Font Size', 'cns-login-master'); ?></label>
+                                                                                        <label for="login-btn"><?php __('Font Size', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -954,7 +954,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Margin', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Margin', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
@@ -978,7 +978,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php _e('Padding', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php __('Padding', 'cns-login-master'); ?></label>
 
                                                                                 </div>
 
