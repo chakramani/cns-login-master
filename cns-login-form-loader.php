@@ -69,11 +69,6 @@ function cns_custom_login_page()
                         </div>
                 <?php } ?>
 
-                <div class="cns-sub-header">
-
-                        <p><?php echo __('This plugin helps you to customize the admin login page.', 'cns-login-master'); ?></p>
-
-                </div>
 
                 <form method="post" action="options.php" id="cns-form">
 

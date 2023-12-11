@@ -775,6 +775,7 @@ input.cns-upload-btn:hover {
   border-radius: 100%;
 
   border: 6px solid #f8f8f8;
+  overflow: hidden;
 
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 
@@ -1017,4 +1018,5 @@ input[type="range"]::-webkit-slider-thumb {
 .cns_site_title {
   text-transform: uppercase;
   color: var(--whitecolor);
+  text-align: center;
 }
