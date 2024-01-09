@@ -6,7 +6,7 @@
  * Plugin URI: chakramanijoshi@gmail.com
  * Description: Allow users to customize the admin login form. 
  * Version: 1.0.0
- * Author: charkamanijoshi,dewebkiller,samkumar10
+ * Author: chakramanijoshi,dewebkiller,samkumar10
  * Text Domain: cns-login-master
  * Author URI: https://chakramanijoshi.com.np/
  * License:           GPL-2.0+
@@ -40,13 +40,15 @@ require $asset_file;
  * 
  * @return the modified array of classes.
  */
-function login_classes($classes)
+if (!function_exists('cnslm_login_classes')) {
+        function cnslm_login_classes($classes)
 
-{
+        {
 
-        $classes[] = 'cns-body';
+                $classes[] = 'cns-body';
 
-        return $classes;
+                return $classes;
+        }
+
+        add_filter('login_body_class', 'cnslm_login_classes');
 }
-
-add_filter('login_body_class', 'login_classes');

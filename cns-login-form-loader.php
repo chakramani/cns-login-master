@@ -1,54 +1,55 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-function cns_admin_login_page_enqueue()
+if (!function_exists('cnslm_admin_login_page_enqueue')) {
+        function cnslm_admin_login_page_enqueue()
 
-{
+        {
 
-        $screen = get_current_screen();
-
-
-
-        // Check screen base and page
-
-        if ('toplevel_page_cns_login_master' === $screen->base && $_GET['page'] === 'cns_login_master') {
-
-                wp_enqueue_style('cns_admin_login_form_css_admin', plugin_dir_url(__FILE__) . '/style.css');
-
-                wp_enqueue_style('vertical-tab-css', plugin_dir_url(__FILE__) . '/assets/css/vertical-tab.css');
+                $screen = get_current_screen();
 
 
 
-                wp_enqueue_media();
+                // Check screen base and page
 
-                wp_enqueue_script('cns_admin_login_form_js_admin', plugin_dir_url(__FILE__) . 'main.js');
+                if ('toplevel_page_cns_login_master' === $screen->base && $_GET['page'] === 'cns_login_master') {
 
-                wp_enqueue_script('vertical-tab-js', plugin_dir_url(__FILE__) . '/assets/js/vertical-tab.js', '', '', true);
+                        wp_enqueue_style('cns_admin_login_form_css_admin', plugin_dir_url(__FILE__) . '/style.css');
+
+                        wp_enqueue_style('vertical-tab-css', plugin_dir_url(__FILE__) . '/assets/css/vertical-tab.css');
+
+
+
+                        wp_enqueue_media();
+
+                        wp_enqueue_script('cns_admin_login_form_js_admin', plugin_dir_url(__FILE__) . 'main.js');
+
+                        wp_enqueue_script('vertical-tab-js', plugin_dir_url(__FILE__) . '/assets/js/vertical-tab.js', '', '', true);
+                }
+        }
+
+        add_action('admin_enqueue_scripts', 'cnslm_admin_login_page_enqueue');
+}
+
+if (!function_exists('cnslm_custom_admin_login_form')) {
+        add_action('admin_menu', 'cnslm_custom_admin_login_form');
+
+        function cnslm_custom_admin_login_form()
+
+        {
+
+                $cns_icon = plugin_dir_url(__FILE__) . '/assets/images/cns-dashicon.png';;
+
+                add_menu_page('CNS Login Master', 'CNS Login Master', 'manage_options', 'cns_login_master', 'cnslm_custom_login_page', $cns_icon);
         }
 }
 
-add_action('admin_enqueue_scripts', 'cns_admin_login_page_enqueue');
-
-
-
-add_action('admin_menu', 'cns_custom_admin_login_form');
-
-function cns_custom_admin_login_form()
-
-{
-
-        $cns_icon = plugin_dir_url(__FILE__) . '/assets/images/cns-dashicon.png';;
-
-        add_menu_page('CNS Login Master', 'CNS Login Master', 'manage_options', 'cns_login_master', 'cns_custom_login_page', $cns_icon);
-}
-
-function cns_custom_login_page()
+function cnslm_custom_login_page()
 
 {
 
         $logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')));
-        $site_title = get_bloginfo('name');
-
-?>
+        $site_title = get_bloginfo('name'); ?>
 
         <div class="wrap cns-wrapper">
 
@@ -96,34 +97,26 @@ function cns_custom_login_page()
 
 <?php }
 
+if (!function_exists('cnslm_settings_fields')) {
+
+        function cnslm_settings_fields()
+
+        {
+
+                add_settings_section('general-section', '', 'cnslm_admin_login_logo', 'login-form-setting');
 
 
 
+                register_setting('login-form-setting-group', 'admin_login_form');
+        }
 
-
-
-
-
-
-
-function cns_settings_fields()
-
-{
-
-        add_settings_section('general-section', '', 'cns_admin_login_logo', 'login-form-setting');
-
-
-
-        register_setting('login-form-setting-group', 'admin_login_form');
+        add_action('admin_init', 'cnslm_settings_fields');
 }
 
-add_action('admin_init', 'cns_settings_fields');
 
 
 
-
-
-function cns_admin_login_logo()
+function cnslm_admin_login_logo()
 
 {
 
@@ -973,7 +966,7 @@ function cns_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <label for="background-bkur"><?php echo __('Padding', 'cns-login-master'); ?></label>
+                                                                                        <label for="background-bkur"><?php printf(__('Padding', 'cns-login-master')); ?></label>
 
                                                                                 </div>
 
@@ -1008,19 +1001,5 @@ function cns_admin_login_logo()
                 </section>
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php }
