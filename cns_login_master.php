@@ -3,10 +3,10 @@
 
 /**
  * Plugin Name: CNS Login Master
- * Plugin URI: chakramanijoshi@gmail.com
+ * Plugin URI: https://chakramanijoshi.com.np/
  * Description: Allow users to customize the admin login form. 
  * Version: 1.0.0
- * Author: charkamanijoshi,dewebkiller,samkumar10
+ * Author: Chakramani Joshi
  * Text Domain: cns-login-master
  * Author URI: https://chakramanijoshi.com.np/
  * License:           GPL-2.0+
@@ -19,12 +19,13 @@ if (!defined('ABSPATH')) {
 
         exit;
 };
+define('CNS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 /* require plugin loder file */
 
-$init_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cns-login-master" . DIRECTORY_SEPARATOR  . "cns-login-form-loader.php";
+$init_file = CNS_PLUGIN_DIR . 'cns-login-form-loader.php';
 
-$asset_file = WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . "cns-login-master" . DIRECTORY_SEPARATOR  . "cns-assets.php";
+$asset_file = CNS_PLUGIN_DIR . 'cns-assets.php';
 
 require $init_file;
 
@@ -40,13 +41,15 @@ require $asset_file;
  * 
  * @return the modified array of classes.
  */
-function login_classes($classes)
+if (!function_exists('cnslm_login_classes')) {
+        function cnslm_login_classes($classes)
 
-{
+        {
 
-        $classes[] = 'cns-body';
+                $classes[] = 'cns-body';
 
-        return $classes;
+                return $classes;
+        }
+
+        add_filter('login_body_class', 'cnslm_login_classes');
 }
-
-add_filter('login_body_class', 'login_classes');

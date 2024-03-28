@@ -3,7 +3,7 @@ Contributors: chakramanijoshi,dewebkiller,samkumar10
 Donate link: https://chakramanijoshi.com.np/
 Tags: wp login, wordpress admin login, login form, custom login form
 Requires at least: 6
-Tested up to: 6.3
+Tested up to: 6.4.3
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
