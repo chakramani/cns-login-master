@@ -199,7 +199,7 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <input type='hidden' id='admin_login_logo_hidden' name=admin_login_form[logo] value='<?php echo !empty($admin_login['logo']) ? $admin_login['logo'] : ''; ?>' />
+                                                                                        <input type='hidden' id='admin_login_logo_hidden' name=admin_login_form[logo] value='<?php echo esc_attr(!empty($admin_login['logo']) ? $admin_login['logo'] : ''); ?>' />
 
                                                                                         <label for="logo"><?php echo esc_html__('Logo Settings', 'cns-login-master'); ?></label>
 
@@ -233,7 +233,7 @@ function cnslm_admin_login_logo()
 
                                                                                                                 <div class="avatar-preview">
 
-                                                                                                                        <div id="image_preview_login_logo" style="background-image: url(<?php echo !empty($admin_login['logo']) ? $admin_login['logo'] : ''; ?>)"></div>
+                                                                                                                        <div id="image_preview_login_logo" style="background-image: url(<?php echo esc_attr(!empty($admin_login['logo']) ? $admin_login['logo'] : ''); ?>)"></div>
 
                                                                                                                 </div>
 
@@ -257,9 +257,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="logo-width-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[logo_width] class='logo-width' value='<?php echo !empty($admin_login['logo_width']) ? $admin_login['logo_width'] : 0; ?>' min="0" max="200" />
+                                                                                        <input type='range' name=admin_login_form[logo_width] class='logo-width' value='<?php echo esc_attr(!empty($admin_login['logo_width']) ? $admin_login['logo_width'] : 0); ?>' min="0" max="200" />
 
-                                                                                        <label for="" class="logo-width-range"><?php echo !empty($admin_login['logo_width']) ? $admin_login['logo_width'] : 0; ?>px</label>
+                                                                                        <label for="" class="logo-width-range"><?php echo esc_attr(!empty($admin_login['logo_width']) ? $admin_login['logo_width'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -275,9 +275,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="logo-height-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[logo_height] class='logo-height' value='<?php echo !empty($admin_login['logo_height']) ? $admin_login['logo_height'] : 0; ?>' min="0" max="200" />
+                                                                                        <input type='range' name=admin_login_form[logo_height] class='logo-height' value='<?php echo esc_attr(!empty($admin_login['logo_height']) ? $admin_login['logo_height'] : 0); ?>' min="0" max="200" />
 
-                                                                                        <label for="" class="logo-height-range"><?php echo !empty($admin_login['logo_height']) ? $admin_login['logo_height'] : 0; ?>px</label>
+                                                                                        <label for="" class="logo-height-range"><?php echo esc_attr(!empty($admin_login['logo_height']) ? $admin_login['logo_height'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -301,7 +301,7 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="cns-label-title">
 
-                                                                                        <input type='hidden' id='admin_login_bg_image_hidden' name=admin_login_form[bg_image] value='<?php echo !empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''; ?>' />
+                                                                                        <input type='hidden' id='admin_login_bg_image_hidden' name=admin_login_form[bg_image] value='<?php echo esc_attr(!empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''); ?>' />
 
                                                                                         <label for="background-image"><?php echo esc_html__('Background Image', 'cns-login-master'); ?></label>
 
@@ -335,7 +335,7 @@ function cnslm_admin_login_logo()
 
                                                                                                                 <div class="avatar-preview image-square">
 
-                                                                                                                        <div id="mobile_image_preview_login_bg" style="background-image: url(<?php echo !empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''; ?>)"></div>
+                                                                                                                        <div id="mobile_image_preview_login_bg" style="background-image: url(<?php echo esc_attr(!empty($admin_login['bg_image']) ? $admin_login['bg_image'] : ''); ?>)"></div>
 
                                                                                                                 </div>
 
@@ -359,9 +359,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper login-form-bg-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[bg_color] class='' value='<?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[bg_color] class='' value='<?php echo esc_attr(!empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['bg_color'])) { ?><div class="color-code" tooltip="Slide to the left" flow="left"><?php echo !empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['bg_color'])) { ?><div class="color-code" tooltip="Slide to the left" flow="left"><?php echo esc_attr(!empty($admin_login['bg_color']) ? $admin_login['bg_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -377,9 +377,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="body-bg-image-blur-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[bg_blur] class='bg-blur' value='<?php echo !empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : 0; ?>' min="0" max="100" />
+                                                                                        <input type='range' name=admin_login_form[bg_blur] class='bg-blur' value='<?php echo esc_attr(!empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : 0); ?>' min="0" max="100" />
 
-                                                                                        <label for="" class="bg-blur-range"><?php echo !empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : 0; ?>px</label>
+                                                                                        <label for="" class="bg-blur-range"><?php echo esc_attr(!empty($admin_login['bg_blur']) ? $admin_login['bg_blur'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -485,9 +485,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-form-container-width-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[login_form_container_width] class='form-container-width' value='<?php echo !empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : 0; ?>' min="0" max="1000" />
+                                                                                        <input type='range' name=admin_login_form[login_form_container_width] class='form-container-width' value='<?php echo esc_attr(!empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : 0); ?>' min="0" max="1000" />
 
-                                                                                        <label for="" class="form-container-width-range"><?php echo !empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : 0; ?>px</label>
+                                                                                        <label for="" class="form-container-width-range"><?php echo esc_attr(!empty($admin_login['login_form_container_width']) ? $admin_login['login_form_container_width'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -505,11 +505,11 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-container-margin-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_container_margin_top] class='login-container-margin' value='<?php echo !empty($admin_login['login_container_margin_top']) ? $admin_login['login_container_margin_top'] : ''; ?>' max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_container_margin_top] class='login-container-margin' value='<?php echo esc_attr(!empty($admin_login['login_container_margin_top']) ? $admin_login['login_container_margin_top'] : ''); ?>' max="500" placeholder="Top" />
 
                                                                                         <input type='number' name=admin_login_form[login_container_margin_right] class='login-container-margin' value='auto' max="500" placeholder="auto" disabled />
 
-                                                                                        <input type='number' name=admin_login_form[login_container_margin_bottom] class='login-container-margin' value='<?php echo !empty($admin_login['login_container_margin_bottom']) ? $admin_login['login_container_margin_bottom'] : ''; ?>' max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_container_margin_bottom] class='login-container-margin' value='<?php echo esc_attr(!empty($admin_login['login_container_margin_bottom']) ? $admin_login['login_container_margin_bottom'] : ''); ?>' max="500" placeholder="Bottom" />
 
                                                                                         <input type='number' name=admin_login_form[login_container_margin_left] class='login-container-margin' value='auto' max="500" placeholder="auto" disabled />
 
@@ -529,13 +529,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-container-padding-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_container_padding_top] class='login-container-padding' value='<?php echo !empty($admin_login['login_container_padding_top']) ? $admin_login['login_container_padding_top'] : ''; ?>' max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_container_padding_top] class='login-container-padding' value='<?php echo esc_attr(!empty($admin_login['login_container_padding_top']) ? $admin_login['login_container_padding_top'] : ''); ?>' max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[login_container_padding_right] class='login-container-padding' value='<?php echo !empty($admin_login['login_container_padding_right']) ? $admin_login['login_container_padding_right'] : ''; ?>' max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[login_container_padding_right] class='login-container-padding' value='<?php echo esc_attr(!empty($admin_login['login_container_padding_right']) ? $admin_login['login_container_padding_right'] : ''); ?>' max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[login_container_padding_bottom] class='login-container-padding' value='<?php echo !empty($admin_login['login_container_padding_bottom']) ? $admin_login['login_container_padding_bottom'] : ''; ?>' max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_container_padding_bottom] class='login-container-padding' value='<?php echo esc_attr(!empty($admin_login['login_container_padding_bottom']) ? $admin_login['login_container_padding_bottom'] : ''); ?>' max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[login_container_padding_left] class='login-container-padding' value='<?php echo !empty($admin_login['login_container_padding_left']) ? $admin_login['login_container_padding_left'] : ''; ?>' max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[login_container_padding_left] class='login-container-padding' value='<?php echo esc_attr(!empty($admin_login['login_container_padding_left']) ? $admin_login['login_container_padding_left'] : ''); ?>' max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -607,9 +607,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper login-form-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[login_box_bg_color] class='' value='<?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[login_box_bg_color] class='' value='<?php echo esc_attr(!empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['login_box_bg_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['login_box_bg_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['login_box_bg_color']) ? $admin_login['login_box_bg_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -625,9 +625,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper login-form-text-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[text_color] class='' value='<?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[text_color] class='' value='<?php echo esc_attr(!empty($admin_login['text_color']) ? $admin_login['text_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['text_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['text_color']) ? $admin_login['text_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['text_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['text_color']) ? $admin_login['text_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -643,9 +643,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-form-font-size-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[font_size] class='font-size' value='<?php echo !empty($admin_login['font_size']) ? $admin_login['font_size'] : 0; ?>' min="0" max="100" />
+                                                                                        <input type='range' name=admin_login_form[font_size] class='font-size' value='<?php echo esc_attr(!empty($admin_login['font_size']) ? $admin_login['font_size'] : 0); ?>' min="0" max="100" />
 
-                                                                                        <label for="" class="font-size-range"><?php echo !empty($admin_login['font_size']) ? $admin_login['font_size'] : 0; ?>px</label>
+                                                                                        <label for="" class="font-size-range"><?php echo esc_attr(!empty($admin_login['font_size']) ? $admin_login['font_size'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -663,13 +663,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-form-margin-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_form_margin_top] class='login-form-margin' value='<?php echo !empty($admin_login['login_form_margin_top']) ? $admin_login['login_form_margin_top'] : ''; ?>' max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_form_margin_top] class='login-form-margin' value='<?php echo esc_attr(!empty($admin_login['login_form_margin_top']) ? $admin_login['login_form_margin_top'] : ''); ?>' max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_margin_right] class='login-form-margin' value='<?php echo !empty($admin_login['login_form_margin_right']) ? $admin_login['login_form_margin_right'] : ''; ?>' max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[login_form_margin_right] class='login-form-margin' value='<?php echo esc_attr(!empty($admin_login['login_form_margin_right']) ? $admin_login['login_form_margin_right'] : ''); ?>' max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_margin_bottom] class='login-form-margin' value='<?php echo !empty($admin_login['login_form_margin_bottom']) ? $admin_login['login_form_margin_bottom'] : ''; ?>' max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_form_margin_bottom] class='login-form-margin' value='<?php echo esc_attr(!empty($admin_login['login_form_margin_bottom']) ? $admin_login['login_form_margin_bottom'] : ''); ?>' max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_margin_left] class='login-form-margin' value='<?php echo !empty($admin_login['login_form_margin_left']) ? $admin_login['login_form_margin_left'] : ''; ?>' max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[login_form_margin_left] class='login-form-margin' value='<?php echo esc_attr(!empty($admin_login['login_form_margin_left']) ? $admin_login['login_form_margin_left'] : ''); ?>' max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -687,13 +687,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-form-padding-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_form_padding_top] class='login-form-padding' value='<?php echo !empty($admin_login['login_form_padding_top']) ? $admin_login['login_form_padding_top'] : ''; ?>' max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_form_padding_top] class='login-form-padding' value='<?php echo esc_attr(!empty($admin_login['login_form_padding_top']) ? $admin_login['login_form_padding_top'] : ''); ?>' max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_padding_right] class='login-form-padding' value='<?php echo !empty($admin_login['login_form_padding_right']) ? $admin_login['login_form_padding_right'] : ''; ?>' max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[login_form_padding_right] class='login-form-padding' value='<?php echo esc_attr(!empty($admin_login['login_form_padding_right']) ? $admin_login['login_form_padding_right'] : ''); ?>' max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_padding_bottom] class='login-form-padding' value='<?php echo !empty($admin_login['login_form_padding_bottom']) ? $admin_login['login_form_padding_bottom'] : ''; ?>' max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_form_padding_bottom] class='login-form-padding' value='<?php echo esc_attr(!empty($admin_login['login_form_padding_bottom']) ? $admin_login['login_form_padding_bottom'] : ''); ?>' max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[login_form_padding_left] class='login-form-padding' value='<?php echo !empty($admin_login['login_form_padding_left']) ? $admin_login['login_form_padding_left'] : ''; ?>' max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[login_form_padding_left] class='login-form-padding' value='<?php echo esc_attr(!empty($admin_login['login_form_padding_left']) ? $admin_login['login_form_padding_left'] : ''); ?>' max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -727,9 +727,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper message-box-bg-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[alert_box_bg_color] class='' value='<?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[alert_box_bg_color] class='' value='<?php echo esc_attr(!empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['alert_box_bg_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['alert_box_bg_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['alert_box_bg_color']) ? $admin_login['alert_box_bg_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -745,9 +745,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper message-box-text-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[alert_box_text_color] class='' value='<?php echo esc_attr(!empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['alert_box_text_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['alert_box_text_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['alert_box_text_color']) ? $admin_login['alert_box_text_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -763,7 +763,7 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="message-box-width-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[message_box_width] class='message-box-width' value='<?php echo !empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0; ?>' min="0" max="100" />
+                                                                                        <input type='range' name=admin_login_form[message_box_width] class='message-box-width' value='<?php echo esc_attr(!empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0); ?>' min="0" max="100" />
 
                                                                                         <label for="" class="message-box-width-range"><?php echo !empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0; ?>%</label>
 
@@ -783,13 +783,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="message-box-margin-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[message_box_margin_top] class='message-box-margin' value='<?php echo !empty($admin_login['message_box_margin_top']) ? $admin_login['message_box_margin_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[message_box_margin_top] class='message-box-margin' value='<?php echo esc_attr(!empty($admin_login['message_box_margin_top']) ? $admin_login['message_box_margin_top'] : ''); ?>' min="0" max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_margin_right] class='message-box-margin' value='<?php echo !empty($admin_login['message_box_margin_right']) ? $admin_login['message_box_margin_right'] : ''; ?>' min="0" max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[message_box_margin_right] class='message-box-margin' value='<?php echo esc_attr(!empty($admin_login['message_box_margin_right']) ? $admin_login['message_box_margin_right'] : ''); ?>' min="0" max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_margin_bottom] class='message-box-margin' value='<?php echo !empty($admin_login['message_box_margin_bottom']) ? $admin_login['message_box_margin_bottom'] : ''; ?>' min="0" max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[message_box_margin_bottom] class='message-box-margin' value='<?php echo esc_attr(!empty($admin_login['message_box_margin_bottom']) ? $admin_login['message_box_margin_bottom'] : ''); ?>' min="0" max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_margin_left] class='message-box-margin' value='<?php echo !empty($admin_login['message_box_margin_left']) ? $admin_login['message_box_margin_left'] : ''; ?>' min="0" max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[message_box_margin_left] class='message-box-margin' value='<?php echo esc_attr(!empty($admin_login['message_box_margin_left']) ? $admin_login['message_box_margin_left'] : ''); ?>' min="0" max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -807,13 +807,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="message-box-padding-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[message_box_padding_top] class='message-box-padding' value='<?php echo !empty($admin_login['message_box_padding_top']) ? $admin_login['message_box_padding_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[message_box_padding_top] class='message-box-padding' value='<?php echo esc_attr(!empty($admin_login['message_box_padding_top']) ? $admin_login['message_box_padding_top'] : ''); ?>' min="0" max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_padding_right] class='message-box-padding' value='<?php echo !empty($admin_login['message_box_padding_right']) ? $admin_login['message_box_padding_right'] : ''; ?>' min="0" max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[message_box_padding_right] class='message-box-padding' value='<?php echo esc_attr(!empty($admin_login['message_box_padding_right']) ? $admin_login['message_box_padding_right'] : ''); ?>' min="0" max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_padding_bottom] class='message-box-padding' value='<?php echo !empty($admin_login['message_box_padding_bottom']) ? $admin_login['message_box_padding_bottom'] : ''; ?>' min="0" max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[message_box_padding_bottom] class='message-box-padding' value='<?php echo esc_attr(!empty($admin_login['message_box_padding_bottom']) ? $admin_login['message_box_padding_bottom'] : ''); ?>' min="0" max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[message_box_padding_left] class='message-box-padding' value='<?php echo !empty($admin_login['message_box_padding_left']) ? $admin_login['message_box_padding_left'] : ''; ?>' min="0" max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[message_box_padding_left] class='message-box-padding' value='<?php echo esc_attr(!empty($admin_login['message_box_padding_left']) ? $admin_login['message_box_padding_left'] : ''); ?>' min="0" max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -849,9 +849,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="link-font-size-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[link_font_size] class='link-font-size' value='<?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0; ?>' min="0" max="100" />
+                                                                                        <input type='range' name=admin_login_form[link_font_size] class='link-font-size' value='<?php echo esc_attr(!empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0); ?>' min="0" max="100" />
 
-                                                                                        <label for="" class="link-font-size-range"><?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0; ?>px</label>
+                                                                                        <label for="" class="link-font-size-range"><?php echo esc_attr(!empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -867,9 +867,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper link-text-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[link_text_color] class='' value='<?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[link_text_color] class='' value='<?php echo esc_attr(!empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['link_text_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['link_text_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['link_text_color']) ? $admin_login['link_text_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -899,9 +899,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="wrapper login-btn-bg-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[login_btn_bg_color] class='cns-login-btn-bg-color' value='<?php echo !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[login_btn_bg_color] class='cns-login-btn-bg-color' value='<?php echo esc_attr(!empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['login_btn_bg_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['login_btn_bg_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['login_btn_bg_color']) ? $admin_login['login_btn_bg_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -917,9 +917,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-btn-color-wrapper">
 
-                                                                                        <input type='color' name=admin_login_form[login_btn_color] class='cns-login-btn-text-color' value='<?php echo !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?>' />
+                                                                                        <input type='color' name=admin_login_form[login_btn_color] class='cns-login-btn-text-color' value='<?php echo esc_attr(!empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''); ?>' />
 
-                                                                                        <?php if (!empty($admin_login['login_btn_color'])) { ?><div class="color-code"><?php echo !empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''; ?></div><span class="copied-message"></span><?php } ?>
+                                                                                        <?php if (!empty($admin_login['login_btn_color'])) { ?><div class="color-code"><?php echo esc_attr(!empty($admin_login['login_btn_color']) ? $admin_login['login_btn_color'] : ''); ?></div><span class="copied-message"></span><?php } ?>
 
                                                                                 </div>
 
@@ -935,9 +935,9 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-btn-font-size-wrapper">
 
-                                                                                        <input type='range' name=admin_login_form[link_font_size] class='login-btn-font-size' value='<?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0; ?>' min="0" max="100" />
+                                                                                        <input type='range' name=admin_login_form[link_font_size] class='login-btn-font-size' value='<?php echo esc_attr(!empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0); ?>' min="0" max="100" />
 
-                                                                                        <label for="" class="login-btn-font-size-range"><?php echo !empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0; ?>px</label>
+                                                                                        <label for="" class="login-btn-font-size-range"><?php echo esc_attr(!empty($admin_login['link_font_size']) ? $admin_login['link_font_size'] : 0); ?>px</label>
 
                                                                                 </div>
 
@@ -953,13 +953,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="login-btn-margin-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_margin_top] class='login-btn-margin' value='<?php echo !empty($admin_login['login_btn_margin_top']) ? $admin_login['login_btn_margin_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_margin_top] class='login-btn-margin' value='<?php echo esc_attr(!empty($admin_login['login_btn_margin_top']) ? $admin_login['login_btn_margin_top'] : ''); ?>' min="0" max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_margin_right] class='login-btn-margin' value='<?php echo !empty($admin_login['login_btn_margin_right']) ? $admin_login['login_btn_margin_right'] : ''; ?>' min="0" max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_margin_right] class='login-btn-margin' value='<?php echo esc_attr(!empty($admin_login['login_btn_margin_right']) ? $admin_login['login_btn_margin_right'] : ''); ?>' min="0" max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_margin_bottom] class='login-btn-margin' value='<?php echo !empty($admin_login['login_btn_margin_bottom']) ? $admin_login['login_btn_margin_bottom'] : ''; ?>' min="0" max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_margin_bottom] class='login-btn-margin' value='<?php echo esc_attr(!empty($admin_login['login_btn_margin_bottom']) ? $admin_login['login_btn_margin_bottom'] : ''); ?>' min="0" max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_margin_left] class='login-btn-margin' value='<?php echo !empty($admin_login['login_btn_margin_left']) ? $admin_login['login_btn_margin_left'] : ''; ?>' min="0" max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_margin_left] class='login-btn-margin' value='<?php echo esc_attr(!empty($admin_login['login_btn_margin_left']) ? $admin_login['login_btn_margin_left'] : ''); ?>' min="0" max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
@@ -977,13 +977,13 @@ function cnslm_admin_login_logo()
 
                                                                                 <div class="logi-btn-padding-wrapper">
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_padding_top] class='logi-btn-padding' value='<?php echo !empty($admin_login['login_btn_padding_top']) ? $admin_login['login_btn_padding_top'] : ''; ?>' min="0" max="500" placeholder="Top" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_padding_top] class='logi-btn-padding' value='<?php echo esc_attr(!empty($admin_login['login_btn_padding_top']) ? $admin_login['login_btn_padding_top'] : ''); ?>' min="0" max="500" placeholder="Top" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_padding_right] class='logi-btn-padding' value='<?php echo !empty($admin_login['login_btn_padding_right']) ? $admin_login['login_btn_padding_right'] : ''; ?>' min="0" max="500" placeholder="Right" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_padding_right] class='logi-btn-padding' value='<?php echo esc_attr(!empty($admin_login['login_btn_padding_right']) ? $admin_login['login_btn_padding_right'] : ''); ?>' min="0" max="500" placeholder="Right" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_padding_bottom] class='logi-btn-padding' value='<?php echo !empty($admin_login['login_btn_padding_bottom']) ? $admin_login['login_btn_padding_bottom'] : ''; ?>' min="0" max="500" placeholder="Bottom" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_padding_bottom] class='logi-btn-padding' value='<?php echo esc_attr(!empty($admin_login['login_btn_padding_bottom']) ? $admin_login['login_btn_padding_bottom'] : ''); ?>' min="0" max="500" placeholder="Bottom" />
 
-                                                                                        <input type='number' name=admin_login_form[login_btn_padding_left] class='logi-btn-padding' value='<?php echo !empty($admin_login['login_btn_padding_left']) ? $admin_login['login_btn_padding_left'] : ''; ?>' min="0" max="500" placeholder="Left" />
+                                                                                        <input type='number' name=admin_login_form[login_btn_padding_left] class='logi-btn-padding' value='<?php echo esc_attr(!empty($admin_login['login_btn_padding_left']) ? $admin_login['login_btn_padding_left'] : ''); ?>' min="0" max="500" placeholder="Left" />
 
                                                                                         <span>px</span>
 
