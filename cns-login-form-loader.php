@@ -59,13 +59,13 @@ function cnslm_custom_login_page()
                 <?php if (!empty($logo)) { ?>
                         <div class="cns-header">
 
-                                <img src="<?php echo $logo; ?>" alt="site logo" class="cns-logo" width="200">
+                                <img src="<?php echo esc_attr($logo); ?>" alt="site logo" class="cns-logo" width="200">
 
                         </div>
                 <?php } else { ?>
                         <div class="cns-header cns_site_title">
 
-                                <h4><?php echo $site_title; ?></h4>
+                                <h4><?php echo esc_attr($site_title); ?></h4>
 
                         </div>
                 <?php } ?>
@@ -765,7 +765,7 @@ function cnslm_admin_login_logo()
 
                                                                                         <input type='range' name=admin_login_form[message_box_width] class='message-box-width' value='<?php echo esc_attr(!empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0); ?>' min="0" max="100" />
 
-                                                                                        <label for="" class="message-box-width-range"><?php echo !empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0; ?>%</label>
+                                                                                        <label for="" class="message-box-width-range"><?php echo esc_attr(!empty($admin_login['message_box_width']) ? $admin_login['message_box_width'] : 0); ?>%</label>
 
                                                                                 </div>
 
