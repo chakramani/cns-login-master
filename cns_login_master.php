@@ -8,7 +8,7 @@
  * Version: 1.0.0
  * Author: Chakramani Joshi
  * Text Domain: cns-login-master
- * Author URI: https://chakramanijoshi.com.np/
+ * Author URI: https://profiles.wordpress.org/chakramanijoshi/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
